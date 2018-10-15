@@ -3,7 +3,8 @@
     "module": "commonjs",
     "target": "es2017",
     "sourceMap": true,
-    "baseUrl":"./"
+    "baseUrl": "./",
+    "outDir": "./dist/"
   },
   "exclude": [
     "node_modules",
