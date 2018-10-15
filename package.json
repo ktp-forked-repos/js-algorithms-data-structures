@@ -1,0 +1,30 @@
+{
+  "name": "js-algorithms-data-structures",
+  "version": "1.0.0",
+  "description": "JavaScript implementation of common data structures and algorithms using TypeScript.",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ihuseynoff/js-algorithms-data-structures.git"
+  },
+  "keywords": [
+    "algorithms",
+    "data",
+    "structures",
+    "javascript",
+    "sorts",
+    "linked",
+    "list",
+    "stack",
+    "queue"
+  ],
+  "author": "Ilkin Huseynov",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ihuseynoff/js-algorithms-data-structures/issues"
+  },
+  "homepage": "https://github.com/ihuseynoff/js-algorithms-data-structures#readme"
+}
