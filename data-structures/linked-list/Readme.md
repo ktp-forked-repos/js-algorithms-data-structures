@@ -15,7 +15,7 @@ Brief information about linked list
 - [x] `getBack()`: return value of end element
 - [ ] `remove(value)`: remove element by value 
 - [x] `size()`: return number of elements in the list
-- [ ] `isEmpty()`: return true | false
+- [x] `isEmpty()`: return true | false
 - [x] `toArray()`: return list as an array
 - [x] `toString()`: return list as a string (for testing purpose)
 

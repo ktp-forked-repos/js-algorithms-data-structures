@@ -66,11 +66,11 @@ export class LinkedList {
         if (this.head == this.tail) {
             this.tail = null;
             this.head = null;
-            return removed;
         } else {
             this.head = this.head.next;
         }
 
+        this.size--;
         return removed;
     }
 
@@ -114,11 +114,12 @@ export class LinkedList {
         let headPointer = this.head;
 
         /**
-         *  If there is only 1 element in the list then tail and head should be equal.
+         *  If there is only 1 element in the list then tail and head should be equal each-other.
          *  Therefore, both of them should be null
          */
         if (headPointer == this.tail) {
             this.head = this.tail = null;
+            this.size--;
             return headPointer.data;
         }
 
@@ -130,6 +131,8 @@ export class LinkedList {
 
         headPointer.next = null;
         this.tail = headPointer;
+
+        this.size--;
         return removed.data;
     }
 
@@ -175,6 +178,23 @@ export class LinkedList {
         return removed;
     }
 
+    /**
+     * Return number of elements in the linked list
+     *
+     * @return number
+     */
+    getSize(): number {
+        return this.size;
+    }
+
+    /**
+     * Return true | false
+     *
+     * @return boolean
+     */
+    isEmpty(): boolean {
+        return this.size == 0;
+    }
 
     /**
      *  Iterate the list and add value of nodes to array
@@ -199,13 +219,5 @@ export class LinkedList {
         return this.toArray().map(node => node.data).toString();
     }
 
-    /**
-     * Return number of elements in the linked list
-     *
-     * @return number
-     */
-    getSize(): number {
-        return this.size;
-    }
 
 }

@@ -129,7 +129,7 @@ describe('LinkedList', () => {
 
     });
 
-    it('shoulde remove node by value', () => {
+    it('should remove node by value', () => {
         const linkedList = new LinkedList();
         let remove = null;
 
@@ -165,6 +165,31 @@ describe('LinkedList', () => {
         expect(linkedList.getFront()).toBe("Audi");
         expect(linkedList.getBack()).toBe("Audi");
 
+
+    });
+
+    it('should return whether list is empty or not', () => {
+        const linkedList = new LinkedList();
+
+        linkedList.pushFront("BMW");
+        linkedList.pushFront("Audi");
+        expect(linkedList.isEmpty()).toBeFalsy();
+
+        linkedList.popBack();
+        linkedList.popFront();
+        expect(linkedList.getSize()).toBe(0);
+        expect(linkedList.isEmpty()).toBeTruthy();
+
+        linkedList.pushFront("BMW");
+        linkedList.popBack();
+        expect(linkedList.getSize()).toBe(0);
+        expect(linkedList.isEmpty()).toBeTruthy();
+
+
+        linkedList.pushBack("BMW");
+        linkedList.popFront();
+        expect(linkedList.getSize()).toBe(0);
+        expect(linkedList.isEmpty()).toBeTruthy();
 
     });
 
