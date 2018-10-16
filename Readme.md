@@ -19,8 +19,7 @@
 ## 🛠 Algorithms 
   
 #### 🔢 Sorting
- 
- 
+
  - Bubble Sort
  - Selection Sort
  - Insertion Sort
@@ -30,6 +29,36 @@
  - Counting Sort 
  - Radix Sort 
  
+## 🖼 Design Patterns
+<details>
+ <summary>
+  View Contents
+ </summary>
+ <p>
+ 
+In software engineering, a design pattern is a general repeatable solution to a commonly occurring problem in software
+design. A design pattern isn't a finished design that can be transformed directly into code. It is a description or 
+template for how to solve a problem that can be used in many different situations.
+ 
+### Creational design patterns
+
+- Singleton
+- Prototype
+- Abstract Factory
+ 
+### Structural design patterns
+
+- Adapter
+- Bridge
+- Decorator
+- Facade 
+- Proxy
+
+### Behavioral design patterns
+
+- 
+ </p>
+</details>
  
 ## 👨‍💻How to use this repository
 <details>
