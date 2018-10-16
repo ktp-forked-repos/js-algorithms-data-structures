@@ -7,7 +7,7 @@
 
 #### Basic Data Structures                              
  
-- `B` [Linked List](data-structures/linked-list/Readme.md): with/without tail pointer      
+- `B` [Linked List](data-structures/linked-list): with/without tail pointer      
 - `B` [Stack]()                                            
 - `B` [Queue]()                                                  
 - `B` [Hash Table]()                                                         
