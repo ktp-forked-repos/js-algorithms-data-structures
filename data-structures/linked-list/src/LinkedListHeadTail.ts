@@ -9,7 +9,7 @@ import {Node} from "./Node";
 import {LinkedListInterface} from "./LinkedListInterface";
 
 
-export class LinkedListHeadTail implements LinkedListInterface{
+export class LinkedListHeadTail implements LinkedListInterface {
 
     private head: Node | null;
     private tail: Node | null;
@@ -26,6 +26,7 @@ export class LinkedListHeadTail implements LinkedListInterface{
      *  Add element to the beginning of the list
      *
      * @param data
+     * @complexity O(1)
      */
     pushFront(data: any): void {
 
@@ -49,7 +50,7 @@ export class LinkedListHeadTail implements LinkedListInterface{
 
     /**
      * Remove front element and return value of it
-     *
+     * @complexity O(1)
      * @return Node
      */
     popFront(): Node | null {
@@ -79,6 +80,7 @@ export class LinkedListHeadTail implements LinkedListInterface{
     /**
      *  Return value of front element
      *
+     * @complexity O(1)
      * @return any | null
      */
     getFront(): any | null {
@@ -89,6 +91,7 @@ export class LinkedListHeadTail implements LinkedListInterface{
      *  Add element to the end of the list
      *
      * @param data
+     * @complexity O(1)
      */
     pushBack(data: any) {
 
@@ -110,6 +113,7 @@ export class LinkedListHeadTail implements LinkedListInterface{
     /**
      * Remove end element and return value of it
      *
+     * @complexity O(n)
      * @return Node
      */
     popBack(): Node | null {
@@ -146,6 +150,7 @@ export class LinkedListHeadTail implements LinkedListInterface{
     /**
      *  Return value of end element
      *
+     * @complexity O(1)
      * @return any
      */
     getBack(): any | null {
@@ -156,6 +161,7 @@ export class LinkedListHeadTail implements LinkedListInterface{
     /**
      * Remove node by value
      *
+     * @complexity O(n)
      * @param value
      * @return boolean
      */
@@ -187,7 +193,7 @@ export class LinkedListHeadTail implements LinkedListInterface{
 
     /**
      * Return number of elements in the linked list
-     *
+     * @complexity O(1)
      * @return number
      */
     getSize(): number {
@@ -196,7 +202,7 @@ export class LinkedListHeadTail implements LinkedListInterface{
 
     /**
      * Return true | false
-     *
+     * @complexity O(1)
      * @return boolean
      */
     isEmpty(): boolean {
@@ -205,7 +211,7 @@ export class LinkedListHeadTail implements LinkedListInterface{
 
     /**
      *  Iterate the list and add value of nodes to array
-     *
+     * @complexity O(n)
      *  @return arr
      */
     toArray(): any[] {
@@ -220,6 +226,7 @@ export class LinkedListHeadTail implements LinkedListInterface{
 
     /**
      *  Return list as string
+     *  @complexity O(n)
      * @return string
      */
     toString(): string {
