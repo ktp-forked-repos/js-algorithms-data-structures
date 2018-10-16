@@ -9,7 +9,7 @@
  
 - `B` [Linked List](data-structures/linked-list): with/without tail pointer      
 - `B` [Stack](data-structures/stack)                                            
-- `B` [Queue]()                                                  
+- `B` [Queue](data-structures/queue)                                                  
 - `B` [Hash Table]()                                                         
 - `B` [Heap]()                                                                       
 - `B` [Priority Queue]()                                                             
