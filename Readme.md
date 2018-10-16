@@ -29,6 +29,12 @@
  
  
 ## How to use this repository
+<details>
+<summary>
+
+# Click to Open
+</summary>
+<p>
 
 1. **Clone repository**
     ```text
@@ -43,4 +49,6 @@
     ```text
     npm test
     ```
+</p>
+</details>
   
