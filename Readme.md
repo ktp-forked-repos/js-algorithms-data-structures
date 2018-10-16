@@ -29,3 +29,18 @@
  
  
 ## How to use this repository
+
+1. **Clone repository**
+    ```text
+    git clone https://github.com/ihuseynoff/js-algorithms-data-structures.git
+    ```
+    
+2. **Install dependencies**
+    ```text
+    npm install
+    ```
+3. **Run tests**
+    ```text
+    npm test
+    ```
+  
