@@ -10,10 +10,10 @@ programming and memory organization in computers.
 
 ## Methods
 
-- [ ] `push()`: Add element to the top of the stack.
-- [ ] `pop()`: Remove top element and return it.
-- [ ] `peek()`: Get the top element of the stack.
-- [ ] `isEmpty()`: Check if stack is empty.
+- [x] `push()`: Add element to the top of the stack.
+- [x] `pop()`: Remove top element and return it.
+- [x] `peek()`: Get the top element of the stack.
+- [x] `isEmpty()`: Check if stack is empty.
 
 
 ## Complexity
