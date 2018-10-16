@@ -38,8 +38,9 @@ export class Queue {
      * @return any | null
      */
     deQueue(): any | null {
-        this.linkedList.popFront();
         this.size--;
+        return this.linkedList.popFront();
+
     }
 
     /**
