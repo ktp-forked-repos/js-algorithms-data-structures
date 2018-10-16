@@ -74,11 +74,13 @@ describe('LinkedList with Head&Tail', () => {
 
         const linkedList = new LinkedListHeadTail();
 
-        linkedList.pushFront("BMW");
-        linkedList.pushFront("Audi");
+
         linkedList.pushBack("Mercedes");
         linkedList.pushBack("Kia");
+        expect(linkedList.toString()).toBe("Mercedes,Kia");
 
+        linkedList.pushFront("BMW");
+        linkedList.pushFront("Audi");
         expect(linkedList.toString()).toBe("Audi,BMW,Mercedes,Kia");
         expect(linkedList.getBack()).toBe("Kia");
 

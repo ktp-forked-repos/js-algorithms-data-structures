@@ -103,10 +103,12 @@ export class LinkedListHeadTail implements LinkedListInterface {
          *   Otherwise, both next element of tail and tail should be equal to new node
          */
         if (this.head == null) {
-            this.head = this.tail
+            this.head = this.tail = newNode;
         } else {
             this.tail = this.tail.next = newNode;
         }
+
+        this.size++;
 
     }
 
