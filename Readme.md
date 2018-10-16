@@ -17,7 +17,14 @@
 
  ## 🛠 Algorithms 
  
+ <details>
+ <summary>
+ 
  #### 🔢 Sorting
+ 
+ </summary>
+ <p>
+ 
  - [ ] Bubble Sort
  - [ ] Selection Sort
  - [ ] Insertion Sort
@@ -26,12 +33,13 @@
  - [ ] Quicksort 
  - [ ] Counting Sort 
  - [ ] Radix Sort 
- 
+ </p>
+ </details>
  
 ## 👨‍💻How to use this repository
 <details>
 <summary>
-Click to Expand
+View Contents
 </summary>
 <p>
 
