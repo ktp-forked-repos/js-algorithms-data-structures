@@ -1,5 +1,5 @@
 # JavaScript Algorithms and Data Structures
-
+[![Build Status](https://travis-ci.com/ihuseynoff/js-algorithms-data-structures.svg?branch=master)](https://travis-ci.com/ihuseynoff/js-algorithms-data-structures)
 
 
 
