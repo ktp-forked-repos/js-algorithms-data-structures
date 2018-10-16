@@ -115,6 +115,11 @@ export class LinkedListHeadTail implements LinkedListInterface{
     popBack(): Node | null {
         let headPointer = this.head;
 
+        // If there is not any element in the list return null
+        if (headPointer == null) {
+            return null;
+        }
+
         /**
          *  If there is only 1 element in the list then tail and head should be equal each-other.
          *  Therefore, both of them should be null

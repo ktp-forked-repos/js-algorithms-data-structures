@@ -7,13 +7,16 @@
 
 import {LinkedListHeadTail} from "../src/LinkedListHeadTail";
 
-describe('LinkedList', () => {
+describe('LinkedList with Head&Tail', () => {
 
     it('should create empty linked list', () => {
 
         const linkedList = new LinkedListHeadTail();
 
         expect(linkedList.toString()).toBe("");
+        expect(linkedList.getFront()).toBeNull();
+        expect(linkedList.isEmpty()).toBeTruthy();
+        expect(linkedList.getSize()).toBe(0);
     });
 
     it('should return number of element in the list', () => {
@@ -44,7 +47,7 @@ describe('LinkedList', () => {
     it('should remove front element and return value', () => {
         const linkedList = new LinkedListHeadTail();
 
-        expect(linkedList.popFront()).toBeNull();
+        expect(linkedList.getBack()).toBeNull();
         expect(linkedList.getFront()).toBeNull();
 
         linkedList.pushFront("BMW");

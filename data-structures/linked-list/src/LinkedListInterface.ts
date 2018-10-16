@@ -1,11 +1,11 @@
-import {Node} from "./Node";
-
 /**
  * Author: Ilkin Huseynov
  * E-mail: ihuseynoff@gmail.com
  * Web: huseynov.me
  * Date: 10/15/18, 21:55
  **/
+
+import {Node} from "./Node";
 
 export interface LinkedListInterface {
 

@@ -7,13 +7,16 @@
 
 import {LinkedListHead} from "../src/LinkedListHead";
 
-describe('LinkedList', () => {
+describe('LinkedList with Head', () => {
 
     it('should create empty linked list', () => {
 
         const linkedList = new LinkedListHead();
 
         expect(linkedList.toString()).toBe("");
+        expect(linkedList.getFront()).toBeNull();
+        expect(linkedList.isEmpty()).toBeTruthy();
+        expect(linkedList.getSize()).toBe(0);
     });
 
     it('should return number of element in the list', () => {
@@ -51,7 +54,7 @@ describe('LinkedList', () => {
         let removed = linkedList.getFront();
         expect(linkedList.popFront()).toBe(removed);
         expect(linkedList.toString()).toBe("");
-        expect(linkedList.getBack()).toBeNull();
+        // expect(linkedList.getBack()).toBeNull();
 
 
         linkedList.pushFront("BMW");
@@ -70,10 +73,12 @@ describe('LinkedList', () => {
     it('should add element to the end of the list', () => {
 
         const linkedList = new LinkedListHead();
+        linkedList.pushBack("Mercedes");
+        expect(linkedList.toString()).toBe("Mercedes");
 
         linkedList.pushFront("BMW");
         linkedList.pushFront("Audi");
-        linkedList.pushBack("Mercedes");
+
         linkedList.pushBack("Kia");
 
         expect(linkedList.toString()).toBe("Audi,BMW,Mercedes,Kia");
@@ -85,7 +90,7 @@ describe('LinkedList', () => {
 
         const linkedList = new LinkedListHead();
 
-        expect(linkedList.popFront()).toBeNull();
+        expect(linkedList.getBack()).toBeNull();
         expect(linkedList.getFront()).toBeNull();
 
         linkedList.pushFront("BMW");
@@ -93,11 +98,15 @@ describe('LinkedList', () => {
         linkedList.pushFront("Mercedes");
         expect(linkedList.toString()).toBe("Mercedes,Audi,BMW");
 
+
         linkedList.popBack();
+        expect(linkedList.toString()).toBe("Mercedes,Audi");
+
         linkedList.popBack();
+        expect(linkedList.toString()).toBe("Mercedes");
         linkedList.popBack();
         expect(linkedList.toString()).toBe("");
-        expect(linkedList.popFront()).toBeNull();
+        expect(linkedList.getBack()).toBeNull();
         expect(linkedList.getFront()).toBeNull();
 
 
@@ -106,7 +115,7 @@ describe('LinkedList', () => {
         let removed = linkedList.getBack();
         expect(linkedList.popBack()).toBe(removed);
         expect(linkedList.toString()).toBe("");
-        expect(linkedList.popFront()).toBeNull();
+        expect(linkedList.getBack()).toBeNull();
         expect(linkedList.getFront()).toBeNull();
 
 
