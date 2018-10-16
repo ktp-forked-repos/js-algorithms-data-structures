@@ -5,19 +5,19 @@
  * Date: 10/15/18, 16:11
  **/
 
-import {LinkedList} from "../src/LinkedList";
+import {LinkedListHead} from "../src/LinkedListHead";
 
 describe('LinkedList', () => {
 
     it('should create empty linked list', () => {
 
-        const linkedList = new LinkedList();
+        const linkedList = new LinkedListHead();
 
         expect(linkedList.toString()).toBe("");
     });
 
     it('should return number of element in the list', () => {
-        const linkedList = new LinkedList();
+        const linkedList = new LinkedListHead();
 
         linkedList.pushFront("BMW");
         linkedList.pushFront("Audi");
@@ -31,7 +31,7 @@ describe('LinkedList', () => {
 
     it('should add element to the beginning of the list', () => {
 
-        const linkedList = new LinkedList();
+        const linkedList = new LinkedListHead();
 
         linkedList.pushFront("BMW");
         linkedList.pushFront("Audi");
@@ -42,7 +42,7 @@ describe('LinkedList', () => {
     });
 
     it('should remove front element and return value', () => {
-        const linkedList = new LinkedList();
+        const linkedList = new LinkedListHead();
 
         expect(linkedList.popFront()).toBeNull();
         expect(linkedList.getFront()).toBeNull();
@@ -69,7 +69,7 @@ describe('LinkedList', () => {
 
     it('should add element to the end of the list', () => {
 
-        const linkedList = new LinkedList();
+        const linkedList = new LinkedListHead();
 
         linkedList.pushFront("BMW");
         linkedList.pushFront("Audi");
@@ -83,7 +83,7 @@ describe('LinkedList', () => {
 
     it('should remove back element and return value', () => {
 
-        const linkedList = new LinkedList();
+        const linkedList = new LinkedListHead();
 
         expect(linkedList.popFront()).toBeNull();
         expect(linkedList.getFront()).toBeNull();
@@ -130,7 +130,7 @@ describe('LinkedList', () => {
     });
 
     it('should remove node by value', () => {
-        const linkedList = new LinkedList();
+        const linkedList = new LinkedListHead();
         let remove = null;
 
         linkedList.pushFront("BMW");
@@ -169,7 +169,7 @@ describe('LinkedList', () => {
     });
 
     it('should return whether list is empty or not', () => {
-        const linkedList = new LinkedList();
+        const linkedList = new LinkedListHead();
 
         linkedList.pushFront("BMW");
         linkedList.pushFront("Audi");

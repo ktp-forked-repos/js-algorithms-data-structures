@@ -13,7 +13,6 @@ Brief information about linked list
 - [x] `pushBack()`: add an element to the end of the list
 - [x] `popBack()`: remove back element and return its value
 - [x] `getBack()`: return value of end element
-- [ ] `remove(value)`: remove element by value 
 - [x] `size()`: return number of elements in the list
 - [x] `isEmpty()`: return true | false
 - [x] `toArray()`: return list as an array

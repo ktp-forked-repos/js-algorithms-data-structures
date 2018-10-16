@@ -6,8 +6,10 @@
  **/
 
 import {Node} from "./Node";
+import {LinkedListInterface} from "./LinkedListInterface";
 
-export class LinkedList {
+
+export class LinkedListHeadTail implements LinkedListInterface{
 
     private head: Node | null;
     private tail: Node | null;

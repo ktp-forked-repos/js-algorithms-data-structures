@@ -12,7 +12,6 @@ export class Node {
 
 
     /**
-     *
      * @param data
      */
     constructor(data: any) {
