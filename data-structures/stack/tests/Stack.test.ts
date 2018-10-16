@@ -24,7 +24,7 @@ describe("Stack", () => {
         stack.push("Audi");
         stack.push("Mercedes");
 
-        expect(stack.toString()).toBe("BMW,Audi,Mercedes");
+
         expect(stack.isEmpty()).toBeFalsy();
     });
 
@@ -38,15 +38,18 @@ describe("Stack", () => {
         let removed = stack.pop();
 
         expect(removed).toBe("Mercedes");
-        expect(stack.toString()).toBe("BMW,Audi");
         expect(stack.isEmpty()).toBeFalsy();
 
 
-        stack.pop();
-        stack.pop();
+        removed = stack.pop();
+        expect(removed).toBe("Audi");
+        expect(stack.isEmpty()).toBeFalsy();
 
-        expect(stack.toString()).toBe("");
+        removed = stack.pop();
+        expect(removed).toBe("BMW");
         expect(stack.isEmpty()).toBeTruthy();
+        expect(stack.toString()).toBe("");
+
     });
 
     it("should get top data element of the stack", () => {
@@ -58,7 +61,6 @@ describe("Stack", () => {
 
         let peeked = stack.peek();
         expect(peeked).toBe("Mercedes");
-        expect(stack.toString()).toBe("BMW,Audi,Mercedes");
         expect(stack.isEmpty()).toBeFalsy();
     });
 

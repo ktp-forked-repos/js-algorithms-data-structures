@@ -10,9 +10,9 @@ programming and memory organization in computers.
 
 ## Methods
 
-- [ ] `push()`: Add element to the stack.
-- [ ] `pop()`: Remove element and return it.
-- [ ] `peek()`: Get the top data element of the stack.
+- [ ] `push()`: Add element to the top of the stack.
+- [ ] `pop()`: Remove top element and return it.
+- [ ] `peek()`: Get the top element of the stack.
 - [ ] `isEmpty()`: Check if stack is empty.
 
 
