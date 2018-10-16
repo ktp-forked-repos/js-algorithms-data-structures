@@ -8,7 +8,7 @@
 #### Basic Data Structures                              
  
 - `B` [Linked List](data-structures/linked-list): with/without tail pointer      
-- `B` [Stack]()                                            
+- `B` [Stack](data-structures/stack)                                            
 - `B` [Queue]()                                                  
 - `B` [Hash Table]()                                                         
 - `B` [Heap]()                                                                       
