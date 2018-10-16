@@ -5,6 +5,10 @@
 
 ## 📦 Data Structures
 
+In computer science, a data structure is a data organization, management and storage format that enables efficient 
+access and modification. More precisely, a data structure is a collection of data values, the relationships among them, 
+and the functions or operations that can be applied to the data.
+
 #### Basic Data Structures                              
 
 - `B` [Linked List](data-structures/linked-list): with/without tail pointer      
@@ -17,8 +21,11 @@
  
 
 ## 🛠 Algorithms 
+
+An algorithm is an unambiguous specification of how to solve a class of problems. It is a set of rules that precisely 
+define a sequence of operations.
   
-#### 🔢 Sorting
+####  Sorting
 
  - Bubble Sort
  - Selection Sort
@@ -28,6 +35,9 @@
  - QuickSort 
  - Counting Sort 
  - Radix Sort 
+ 
+ 
+ 
  
 ## 🎨 Design Patterns
 <details>
