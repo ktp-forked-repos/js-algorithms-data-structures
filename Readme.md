@@ -3,7 +3,7 @@
 
 
 
-## ⛓ Data Structures
+## 📦 Data Structures
 
 #### Basic Data Structures                              
  
@@ -15,9 +15,9 @@
 - `B` [Priority Queue]()                                                             
 
 
- ## 🔨 Algorithms 
+ ## 🛠 Algorithms 
  
- #### Sorting
+ #### 🔢 Sorting
  - [ ] Bubble Sort
  - [ ] Selection Sort
  - [ ] Insertion Sort
@@ -28,7 +28,7 @@
  - [ ] Radix Sort 
  
  
-## How to use this repository
+## 👨‍💻How to use this repository
 <details>
 <summary>
 Click to Expand
