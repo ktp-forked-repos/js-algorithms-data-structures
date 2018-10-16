@@ -9,6 +9,12 @@ In computer science, a data structure is a data organization, management and sto
 access and modification. More precisely, a data structure is a collection of data values, the relationships among them, 
 and the functions or operations that can be applied to the data.
 
+<details>
+<summary>
+    View Contents
+</summary>
+<p>
+
 #### Basic Data Structures                              
 
 - `B` [Linked List](data-structures/linked-list): with/without tail pointer      
@@ -19,12 +25,19 @@ and the functions or operations that can be applied to the data.
 - `B` Priority Queue                                                          
 
  
-
+</p>
+</details>
 ## 🛠 Algorithms 
 
 An algorithm is an unambiguous specification of how to solve a class of problems. It is a set of rules that precisely 
 define a sequence of operations.
   
+<details>
+<summary>
+    View Contents
+</summary>
+<p>
+
 ####  Sorting
 
  - Bubble Sort
@@ -35,21 +48,24 @@ define a sequence of operations.
  - QuickSort 
  - Counting Sort 
  - Radix Sort 
- 
+  </p>
+</details>
  
  
  
 ## 🎨 Design Patterns
+
+In software engineering, a design pattern is a general repeatable solution to a commonly occurring problem in software
+design. A design pattern isn't a finished design that can be transformed directly into code. It is a description or 
+template for how to solve a problem that can be used in many different situations.
+ 
 <details>
  <summary>
   View Contents
  </summary>
  <p>
  
-In software engineering, a design pattern is a general repeatable solution to a commonly occurring problem in software
-design. A design pattern isn't a finished design that can be transformed directly into code. It is a description or 
-template for how to solve a problem that can be used in many different situations.
- 
+
 ### Creational design patterns
 
 - Singleton
