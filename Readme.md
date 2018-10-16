@@ -17,11 +17,11 @@
 
  ## 🛠 Algorithms 
  
- <details>
+ 
+#### 🔢 Sorting
+<details>
  <summary>
- 
- #### 🔢 Sorting
- 
+  View Contents
  </summary>
  <p>
  
@@ -34,7 +34,7 @@
  - [ ] Counting Sort 
  - [ ] Radix Sort 
  </p>
- </details>
+</details>
  
 ## 👨‍💻How to use this repository
 <details>
