@@ -38,11 +38,36 @@ export class Queue {
      * @return any | null
      */
     deQueue(): any | null {
-
         this.linkedList.popFront();
+        this.size--;
+    }
 
-        this.size++;
+    /**
+     * Get the bottommost element of the queue.
+     *
+     * @complexity O(1)
+     * @return any | null
+     */
+    peek(): any | null {
+        return this.linkedList.getFront();
+    }
 
+    /**
+     * Check whether queue is empty or not
+     *
+     * @return boolean
+     */
+    isEmpty(): boolean {
+        return this.size <= -1;
+    }
+
+    /**
+     * Return queue as a list
+     *
+     * @return string
+     */
+    toString(): string {
+        return this.linkedList.toString();
     }
 
 

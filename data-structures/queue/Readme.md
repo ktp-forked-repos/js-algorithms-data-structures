@@ -11,7 +11,8 @@ programming and memory organization in computers.
 ## Methods
 
 - [x] `enQueue()`: Add element to the bottom of the queue.
-- [x] `deQueue()`: Remove top element and return it.
+- [x] `deQueue()`: Remove bottommost element and return it.
+- [x] `peek()`: Get the bottommost element of the stack.
 - [x] `isEmpty()`: Check if queue is empty.
 
 
@@ -21,8 +22,8 @@ programming and memory organization in computers.
 
 | Methods      | Complexity |  
 | :----------: | :----------------: |  
-| `enqueue()`  |      O(1)          |  
-| `dequeue()`  |      O(1)          |  
+| `enQueue()`  |      O(1)          |  
+| `deQueue()`  |      O(1)          |  
 
  
 
