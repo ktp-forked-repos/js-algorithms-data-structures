@@ -90,6 +90,6 @@ View Contents
     View Contents
  </summary>
  <p>
-    Thanks for your interest in contributing! Read up on  guidelines for [contributing]().
+    Thanks for your interest in contributing! Read up on  guidelines for <a href="Contributing.md">Contributing</a>.
  </p>
 </details>
