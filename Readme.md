@@ -31,8 +31,7 @@
 ## How to use this repository
 <details>
 <summary>
-
-# Click to Open
+Click to Expand
 </summary>
 <p>
 
