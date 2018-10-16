@@ -3,7 +3,7 @@
 
 
 
-## Data Structures
+## ⛓ Data Structures
 
 #### Basic Data Structures                              
  
@@ -15,7 +15,7 @@
 - `B` [Priority Queue]()                                                             
 
 
- ## Algorithms 
+ ## 🔨 Algorithms 
  
  #### Sorting
  - [ ] Bubble Sort
