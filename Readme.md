@@ -27,6 +27,7 @@ and the functions or operations that can be applied to the data.
  
 </p>
 </details>
+
 ## 🛠 Algorithms 
 
 An algorithm is an unambiguous specification of how to solve a class of problems. It is a set of rules that precisely 
