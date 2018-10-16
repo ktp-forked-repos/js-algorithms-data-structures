@@ -6,35 +6,30 @@
 ## 📦 Data Structures
 
 #### Basic Data Structures                              
- 
+
 - `B` [Linked List](data-structures/linked-list): with/without tail pointer      
 - `B` [Stack](data-structures/stack)                                            
 - `B` [Queue](data-structures/queue)                                                  
-- `B` [Hash Table]()                                                         
-- `B` [Heap]()                                                                       
-- `B` [Priority Queue]()                                                             
+- `B` Hash Table                                                          
+- `B` Heap                                                                      
+- `B` Priority Queue                                                          
 
+ 
 
- ## 🛠 Algorithms 
- 
- 
+## 🛠 Algorithms 
+  
 #### 🔢 Sorting
-<details>
- <summary>
-  View Contents
- </summary>
- <p>
  
- - [ ] Bubble Sort
- - [ ] Selection Sort
- - [ ] Insertion Sort
- - [ ] Heap Sort
- - [ ] Merge Sort
- - [ ] Quicksort 
- - [ ] Counting Sort 
- - [ ] Radix Sort 
- </p>
-</details>
+ 
+ - Bubble Sort
+ - Selection Sort
+ - Insertion Sort
+ - Heap Sort
+ - Merge Sort
+ - QuickSort 
+ - Counting Sort 
+ - Radix Sort 
+ 
  
 ## 👨‍💻How to use this repository
 <details>
