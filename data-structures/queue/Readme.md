@@ -12,7 +12,7 @@ programming and memory organization in computers.
 
 - [x] `enQueue()`: Add element to the bottom of the queue.
 - [x] `deQueue()`: Remove bottommost element and return it.
-- [x] `peek()`: Get the bottommost element of the stack.
+- [x] `peek()`: Get the bottommost element of the queue.
 - [x] `isEmpty()`: Check if queue is empty.
 
 
