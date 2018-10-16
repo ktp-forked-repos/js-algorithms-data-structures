@@ -29,7 +29,7 @@
  - Counting Sort 
  - Radix Sort 
  
-## 🖼 Design Patterns
+## 🎨 Design Patterns
 <details>
  <summary>
   View Contents
@@ -60,7 +60,7 @@ template for how to solve a problem that can be used in many different situation
  </p>
 </details>
  
-## 👨‍💻How to use this repository
+## 👨‍💻 Getting Started
 <details>
 <summary>
 View Contents
@@ -84,7 +84,12 @@ View Contents
 </details>
  
  
- ## 👨‍💻How to contribute this repository 
- Thanks for your interest in contributing! Read up on  guidelines for contributing.
- 
- 
+## 🤝 Contributing
+<details>
+ <summary>
+    View Contents
+ </summary>
+ <p>
+    Thanks for your interest in contributing! Read up on  guidelines for [contributing]().
+ </p>
+</details>
