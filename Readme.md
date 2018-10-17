@@ -95,7 +95,7 @@ View Contents
 </summary>
 <p>
 
-#### Prerequisites
+### Prerequisites
 
 ```text
 1) Node
@@ -103,7 +103,7 @@ View Contents
 
 ```
 
-#### Installing
+### Installing
 
 1. **Clone repository**
     ```text
@@ -133,6 +133,6 @@ View Contents
  </p>
 </details>
 
-## License
+## © License
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details
 
