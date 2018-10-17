@@ -1,6 +1,8 @@
-# JavaScript Algorithms and Data Structures
-[![Build Status](https://travis-ci.com/ihuseynoff/js-algorithms-data-structures.svg?branch=master)](https://travis-ci.com/ihuseynoff/js-algorithms-data-structures)
+# JavaScript Algorithms and Data Structures 
 
+[![Build Status](https://travis-ci.com/ihuseynoff/js-algorithms-data-structures.svg?branch=master)](https://travis-ci.com/ihuseynoff/js-algorithms-data-structures)
+[![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://GitHub.com/Naereen/StrapDown.js/graphs/commit-activity)
+[![GitHub license](https://img.shields.io/github/license/Naereen/StrapDown.js.svg)](LICENSE)
 
 
 ## 📦 Data Structures
@@ -97,27 +99,29 @@ View Contents
 
 ### Prerequisites
 
-```text
-1) Node
-2) NPM
+To clone and run this application, you'll need Git and Node.js (which comes with npm) installed on your computer. 
+
+
+### Installing
+From your command line:
+
+ ```text
+# Clone this repository
+$ git clone https://github.com/ihuseynoff/js-algorithms-data-structures.git
+ 
+# Go into the repository
+$ cd js-algorithms-data-structures
+
+# Install dependencies
+$ npm install
 
 ```
 
-### Installing
-
-1. **Clone repository**
-    ```text
-    git clone https://github.com/ihuseynoff/js-algorithms-data-structures.git
-    ```
-    
-2. **Install dependencies**
-    ```text
-    npm install
-    ```
-3. **Run tests**
-    ```text
-    npm test
-    ```
+ 
+### Testing
+```text
+$ npm test
+```
 </p>
 </details>
  
@@ -134,5 +138,11 @@ View Contents
 </details>
 
 ## © License
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details
-
+<details>
+ <summary>
+    View Contents
+ </summary>
+ <p>
+This project is licensed under the MIT License - see the <a href="LICENSE">LICENSE</a> file for details
+ </p>
+</details>
