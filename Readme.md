@@ -11,7 +11,7 @@ and the functions or operations that can be applied to the data.
 
 <details>
 <summary>
-    View Contents
+    View Contents 
 </summary>
 <p>
 
@@ -87,12 +87,23 @@ template for how to solve a problem that can be used in many different situation
  </p>
 </details>
  
-## 👨‍💻 Getting Started
+## 💻 Getting Started
+
 <details>
 <summary>
 View Contents
 </summary>
 <p>
+
+#### Prerequisites
+
+```text
+1) Node
+2) NPM
+
+```
+
+#### Installing
 
 1. **Clone repository**
     ```text
@@ -111,6 +122,7 @@ View Contents
 </details>
  
  
+ 
 ## 🤝 Contributing
 <details>
  <summary>
@@ -120,3 +132,7 @@ View Contents
     Thanks for your interest in contributing! Read up on  guidelines for <a href="Contributing.md">Contributing</a>.
  </p>
 </details>
+
+## License
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details
+
