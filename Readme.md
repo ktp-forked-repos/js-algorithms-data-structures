@@ -1,11 +1,11 @@
-# JavaScript Algorithms and Data Structures 
+# JavaScript Algorithms, Data Structures and Design Patterns
 
 [![Build Status](https://travis-ci.com/ihuseynoff/js-algorithms-data-structures.svg?branch=master)](https://travis-ci.com/ihuseynoff/js-algorithms-data-structures)
-[![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://GitHub.com/Naereen/StrapDown.js/graphs/commit-activity)
+[![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://github.com/ihuseynoff/js-algorithms-data-structures/graphs/commit-activity)
 [![GitHub license](https://img.shields.io/github/license/Naereen/StrapDown.js.svg)](LICENSE)
 
 
-## 📦 Data Structures
+## 🗃 Data Structures
 
 In computer science, a data structure is a data organization, management and storage format that enables efficient 
 access and modification. More precisely, a data structure is a collection of data values, the relationships among them, 
@@ -137,7 +137,7 @@ $ npm test
  </p>
 </details>
 
-## © License
+## 🎓 License
 <details>
  <summary>
     View Contents
