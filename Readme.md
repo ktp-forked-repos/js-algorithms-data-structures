@@ -23,7 +23,7 @@ and the functions or operations that can be applied to the data.
 - `B` [Stack](data-structures/stack)                                            
 - `B` [Queue](data-structures/queue)                                                  
 - `B` Hash Table                                                          
-- `B` Heap                                                                      
+- `B` [Heap](data-structures/heap)                                                                       
 - `B` Priority Queue                                                          
 
  
