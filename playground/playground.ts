@@ -4,12 +4,11 @@
  * Web: huseynov.me
  * Date: 10/18/18, 18:52
  **/
+import {HeapMax} from "../data-structures/heap/src/HeapMax";
+import {HeapMin} from "../data-structures/heap/src/HeapMin";
 
 
-import {Heap} from "../data-structures/heap/src/Heap";
-
-
-let heap = new Heap();
+let heap = new HeapMin();
 
 heap.add(18);
 heap.add(10);
@@ -33,4 +32,4 @@ heap.poll();
 console.log(heap.toString());
 
 
-
+// 15,10,8,9,10,6,4,5,2,9,7,3,2,3
