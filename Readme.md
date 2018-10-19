@@ -1,13 +1,14 @@
 
 <p align="center"> 
 
- <img src="logo.png" style="width:50%">
-
-</p>
+ <img src="logo.png" width="300" height="294">
 
 [![Build Status](https://travis-ci.com/ihuseynoff/js-algorithms-data-structures.svg?branch=master)](https://travis-ci.com/ihuseynoff/js-algorithms-data-structures)
 [![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://github.com/ihuseynoff/js-algorithms-data-structures/graphs/commit-activity)
 [![GitHub license](https://img.shields.io/github/license/Naereen/StrapDown.js.svg)](LICENSE)
+
+</p>
+
 
 
 ## 🗃 Data Structures
