@@ -8,11 +8,14 @@
 /**
  * Max Heap
  */
-export class Heap {
+export abstract class Heap {
 
-    private container: any;
+    protected container: any;
 
-    constructor() {
+    /**
+     *
+     */
+    protected constructor() {
         this.container = [];
     }
 
@@ -47,16 +50,30 @@ export class Heap {
     }
 
 
+    /**
+     *
+     * @param {number} index
+     * @return {boolean}
+     */
     private hasLeftChild(index: number): boolean {
         return this.leftChildIndex(index) < this.container.length;
     }
 
-
+    /**
+     *
+     * @param {number} index
+     * @return {boolean}
+     */
     private hasRightChild(index: number): boolean {
         return this.rightChildIndex(index) < this.container.length;
     }
 
 
+    /**
+     *
+     * @param index
+     * @return {boolean}
+     */
     private hasParent(index) {
         return this.parentIndex(index) >= 0;
     }
@@ -113,7 +130,8 @@ export class Heap {
         let index = this.container.length - 1;
 
 
-        while (this.hasParent(index) && this.container[index] > this.getParent(index)) {
+        // while (this.hasParent(index) && this.container[index] > this.getParent(index)) {
+        while (this.hasParent(index) && this.compare(this.container[index], this.getParent(index))) {
             this.swap(index, this.parentIndex(index));
             index = this.parentIndex(index);
 
@@ -121,15 +139,18 @@ export class Heap {
     }
 
 
+
     private heapifyDown() {
         let index = 0;
 
+
         while (this.hasLeftChild(index)) {
             let compareIndex = this.leftChildIndex(index);
-            if (this.hasRightChild(index) && this.rightChild(index) > this.leftChild(index)) {
+            if (this.hasRightChild(index) && this.compare(this.rightChild(index), this.leftChild(index))) {
                 compareIndex = this.rightChildIndex(index);
             }
-            if (this.container[compareIndex] > this.container[index]) {
+            // if (this.container[compareIndex] > this.container[index]) {
+            if (this.compare(this.container[compareIndex], this.container[index])) {
                 this.swap(compareIndex, index);
             } else {
                 break;
@@ -142,6 +163,11 @@ export class Heap {
     }
 
 
+    /**
+     *
+     *
+     * @return {number | null}
+     */
     public peek(): number | null {
         if (this.container.lenngth == 0) return null;
         return this.container[0];
@@ -157,10 +183,7 @@ export class Heap {
 
         let item = this.container[0];
 
-        this.container[0] = this.container[this.container.length - 1];
-        this.container[this.container.length - 1] = undefined;
-
-        this.container.pop();
+        this.container[0] = this.container.pop();
 
         this.heapifyDown();
 
@@ -177,6 +200,10 @@ export class Heap {
         return this.container.toString();
     }
 
+
+    protected compare(firstChild, secondChild) {
+        return false;
+    };
 
 }
 
