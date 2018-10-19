@@ -1,4 +1,9 @@
-# JavaScript Algorithms, Data Structures and Design Patterns
+
+<p align="center"> 
+
+ <img src="logo.png" style="width:50%">
+
+</p>
 
 [![Build Status](https://travis-ci.com/ihuseynoff/js-algorithms-data-structures.svg?branch=master)](https://travis-ci.com/ihuseynoff/js-algorithms-data-structures)
 [![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://github.com/ihuseynoff/js-algorithms-data-structures/graphs/commit-activity)
@@ -22,8 +27,10 @@ and the functions or operations that can be applied to the data.
 - `B` [Linked List](data-structures/linked-list): with/without tail pointer      
 - `B` [Stack](data-structures/stack)                                            
 - `B` [Queue](data-structures/queue)                                                  
-- `B` Hash Table                                                          
-- `B` [Heap](data-structures/heap)                                                                       
+- `B` Hash Table             
+
+#### Tree                                               
+- `B` [Heap](data-structures/heap): min/max version                                                                 
 - `B` Priority Queue                                                          
 
  
