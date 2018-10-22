@@ -25,8 +25,8 @@ export class LinkedListHead implements LinkedListInterface {
      * Add element to the beginning of the list
      *
      * @description First create a node with data. Second, check if there is an element in the list already,
-     * then next pointer of created node should be equal to the head and head should point to the new node.
-     * If there isn't any element in the list, then head should point to the new node. At the end, increment size.
+     * if so next pointer of created node should be equal to the head and head should now point to the new node.
+     * If there isn't any element in the list, then head should point to the new node.
      *
      * @complexity: O(1)
      *
@@ -126,12 +126,11 @@ export class LinkedListHead implements LinkedListInterface {
             return this.popFront();
         }
 
-        while (pointer != null) {
-            if (pointer.next.next == null) {
-                break;
-            }
+
+        while (pointer.next.next != null) {
             pointer = pointer.next;
         }
+
         let removed = pointer.next;
         pointer.next = null;
 
@@ -248,6 +247,5 @@ export class LinkedListHead implements LinkedListInterface {
     toString(): string {
         return this.toArray().map(node => node.data).toString();
     }
-
 
 }

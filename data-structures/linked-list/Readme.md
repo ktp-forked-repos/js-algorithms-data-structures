@@ -31,7 +31,7 @@ compared to linked lists.
  
 ## Good to Know
 
-#### Array vs Linked List
+### Array vs Linked List
 
  
 <table>
@@ -49,7 +49,7 @@ compared to linked lists.
 
 
 ## Complexities
-#### Time Complexity
+### Time Complexity
 
 | Methods           | One Pointer (Head) | Two Pointer (Head and Tai) | 
 | :---------------: | :------------:     | :-------------------------: |       

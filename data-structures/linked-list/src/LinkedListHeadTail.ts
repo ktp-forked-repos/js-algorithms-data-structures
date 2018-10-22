@@ -15,6 +15,9 @@ export class LinkedListHeadTail implements LinkedListInterface {
     private tail: Node | null;
     private size: number;
 
+    /**
+     * @constructor
+     */
     constructor() {
         this.head = null;
         this.tail = null;
@@ -23,21 +26,22 @@ export class LinkedListHeadTail implements LinkedListInterface {
 
 
     /**
-     *  Add element to the beginning of the list
+     * Add element to the beginning of the list.
+     *
+     * @description First create a node with data. Second, check if list is empty, if so head and tail should point to
+     * the newly created node. Otherwise, next element of new node should be equal to current head and head now
+     * should point to the new node.
+     *
+     * @complexity O(1)
      *
      * @param data
-     * @complexity O(1)
      */
     pushFront(data: any): void {
 
         // Create new node with element
         let newNode = new Node(data);
 
-        /**
-         *   If list is empty then head and tail should point to the newly created node.
-         *   Otherwise, next element of new node should be equal to current head element
-         *   and head now should  point to the new node.
-         */
+
         if (this.head == null) {
             this.head = this.tail = newNode;
         } else {
@@ -50,21 +54,20 @@ export class LinkedListHeadTail implements LinkedListInterface {
 
     /**
      * Remove front element and return value of it
+     *
+     * @description If head is null that means list is empty, so return null. If head and tail is equal that means
+     * there is only 1 element in the list so, both of them should be null. Otherwise head should point to the next
+     * element of the removed head.
+     *
      * @complexity O(1)
      * @return Node
      */
-    popFront(): Node | null {
-
-        // If there is not any element in the list return null
+    popFront(): any | null {
         if (this.head == null) {
             return null;
         }
 
-        /**
-         *  If there is only 1 element in the list then tail and head should be equal.
-         *  Therefore, both of them should be null, otherwise Head should be point to
-         *  next element of the removed head
-         */
+
         let removed = this.head.data;
         if (this.head == this.tail) {
             this.tail = null;
@@ -78,30 +81,30 @@ export class LinkedListHeadTail implements LinkedListInterface {
     }
 
     /**
-     *  Return value of front element
+     * Return value of front element
      *
-     * @complexity O(1)
-     * @return any | null
+     * @description Check if head isn't null then return value of head. Otherwise, return null.
+     *
+     * @return {any | null}
      */
     getFront(): any | null {
         return this.head ? this.head.data : null;
     }
 
     /**
-     *  Add element to the end of the list
+     * Add element to the end of the list
+     *
+     * @description First create a node with data. Second, check if head is null,
+     * if so list is empty therefore head and tail should point to the newly created node.
+     * Otherwise, both next pointers of tail and tail itself should be equal to  the new node.
+     *
+     * @complexity O(1)
      *
      * @param data
-     * @complexity O(1)
      */
     pushBack(data: any) {
-
-        // Create new node with element
         const newNode = new Node(data);
 
-        /**
-         *   If list is empty then head and tail should point to the newly created node.
-         *   Otherwise, both next element of tail and tail should be equal to new node
-         */
         if (this.head == null) {
             this.head = this.tail = newNode;
         } else {
@@ -115,28 +118,29 @@ export class LinkedListHeadTail implements LinkedListInterface {
     /**
      * Remove end element and return value of it
      *
+     * @description If head is equal to null that means list is empty so return null.
+     * If head and tail is equal that means there is only one element in the list, therefore
+     * both of them should be equal to null. Otherwise iterate list to find node before last node
+     * because last node will be deleted. Then modify next value of founded node to null and value of tail
+     * to founded node.
+     *
      * @complexity O(n)
      * @return Node
      */
     popBack(): Node | null {
         let headPointer = this.head;
 
-        // If there is not any element in the list return null
         if (headPointer == null) {
             return null;
         }
 
-        /**
-         *  If there is only 1 element in the list then tail and head should be equal each-other.
-         *  Therefore, both of them should be null
-         */
         if (headPointer == this.tail) {
             this.head = this.tail = null;
             this.size--;
             return headPointer.data;
         }
 
-        while (headPointer.next != this.tail) {
+        while (headPointer.next.next != null) {
             headPointer = headPointer.next;
         }
 
@@ -152,20 +156,29 @@ export class LinkedListHeadTail implements LinkedListInterface {
     /**
      *  Return value of end element
      *
+     * @description Check if tail isn't null then return value of tail. Otherwise, return null.
+     *
      * @complexity O(1)
+     *
      * @return any
      */
     getBack(): any | null {
         return this.tail ? this.tail.data : null;
     }
 
-
     /**
-     * Remove node by value
+     * Remove node by value.
+     *
+     * @description If searching value is equal to value of head, then remove head.
+     * If searching value is equal to value of tail, then remove tail.
+     * Otherwise iterate list and stop at the node which's next value is searching one,
+     * in other word, stop on the node that is one before of deleted one. Then next pointer
+     * of stopped node should be equal to the next pointer of deleted one.
      *
      * @complexity O(n)
-     * @param value
-     * @return boolean
+     *
+     * @param value - Node value looking for removing.
+     * @return {boolean}
      */
     removeByValue(value: any): boolean {
         let removed = false;
@@ -195,6 +208,7 @@ export class LinkedListHeadTail implements LinkedListInterface {
 
     /**
      * Return number of elements in the linked list
+     *
      * @complexity O(1)
      * @return number
      */
@@ -203,18 +217,26 @@ export class LinkedListHeadTail implements LinkedListInterface {
     }
 
     /**
-     * Return true | false
+     * Check whether list is empty or not?
+     *
+     * @description If size of list is equal to 0, then list is empty.
+     *
      * @complexity O(1)
-     * @return boolean
+     *
+     * @return {boolean}
      */
     isEmpty(): boolean {
         return this.size == 0;
     }
 
     /**
-     *  Iterate the list and add value of nodes to array
+     * Return list as an array
+     *
+     * @description Iterate the list and add node to an array
+     *
      * @complexity O(n)
-     *  @return arr
+     *
+     * @return {any[]}
      */
     toArray(): any[] {
         let arr = [];
@@ -227,13 +249,16 @@ export class LinkedListHeadTail implements LinkedListInterface {
     }
 
     /**
-     *  Return list as string
-     *  @complexity O(n)
-     * @return string
+     * Return list as a string
+     *
+     * @description Create new array with value of nodes data based on array created by toArray() function and convert it
+     * to the string using build-in toString() method.
+     *
+     *
+     * @return {string}
      */
     toString(): string {
         return this.toArray().map(node => node.data).toString();
     }
-
 
 }

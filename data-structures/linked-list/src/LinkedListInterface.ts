@@ -10,7 +10,7 @@ import {Node} from "./Node";
 export interface LinkedListInterface {
 
     /**
-     *  Add element to the beginning of the list
+     * Add element to the beginning of the list
      *
      * @param data
      */
@@ -19,19 +19,19 @@ export interface LinkedListInterface {
     /**
      * Remove front element and return value of it
      *
-     * @return Node
+     * @return {any | null}
      */
-    popFront(): Node | null;
+    popFront(): any | null;
 
     /**
      *  Return value of front element
      *
-     * @return any | null
+     * @return {any | null}
      */
     getFront(): any | null;
 
     /**
-     *  Add element to the end of the list
+     * Add element to the end of the list.
      *
      * @param data
      */
@@ -40,14 +40,14 @@ export interface LinkedListInterface {
     /**
      * Remove end element and return value of it
      *
-     * @return Node
+     * @return {any | null}
      */
-    popBack(): Node | null;
+    popBack(): any | null;
 
     /**
      *  Return value of end element
      *
-     * @return any
+     * @return {any | null}
      */
     getBack(): any | null;
 
@@ -55,34 +55,35 @@ export interface LinkedListInterface {
      * Remove node by value
      *
      * @param value
-     * @return boolean
+     * @return {boolean}
      */
     removeByValue(value: any): boolean;
 
     /**
      * Return number of elements in the linked list
      *
-     * @return number
+     * @return {number}
      */
     getSize(): number;
 
     /**
-     * Return true | false
+     * Check whether list is empty or not
      *
-     * @return boolean
+     * @return {boolean}
      */
     isEmpty(): boolean;
 
     /**
-     *  Iterate the list and add value of nodes to array
+     * Iterate the list and add value of nodes to array
      *
-     *  @return arr
+     * @return {any[]}
      */
     toArray(): any[];
 
     /**
-     *  Return list as string
-     * @return string
+     * Return list as string
+     *
+     * @return {string}
      */
     toString(): string;
 
