@@ -13,27 +13,28 @@ export class LinkedListHead implements LinkedListInterface {
     private head: Node | null;
     private size: number;
 
+    /**
+     * @constructor
+     */
     constructor() {
         this.head = null;
         this.size = 0;
     }
 
-
     /**
-     *  Add element to the beginning of the list
+     * Add element to the beginning of the list
      *
-     * @param data
+     * @description First create a node with data. Second, check if there is an element in the list already,
+     * then next pointer of created node should be equal to the head and head should point to the new node.
+     * If there isn't any element in the list, then head should point to the new node. At the end, increment size.
+     *
+     * @complexity: O(1)
+     *
+     * @param {any} data - Element that will be added to the list.
      */
     pushFront(data: any): void {
-
         let newNode = new Node(data);
 
-        /**
-         * If there is an element in the list already, then next pointer of newly created node
-         * should be equal to the head and head should point to the new node.
-         * If there isn't any element, then head should point new node
-         *
-         */
         if (this.head != null) {
             newNode.next = this.head;
         }
@@ -42,17 +43,16 @@ export class LinkedListHead implements LinkedListInterface {
     }
 
     /**
-     * Remove front element and return value of it
+     * Remove front element and return value of it.
      *
-     * @return Node
+     * @description First check if there isn't any element in the list, then return null.
+     * Otherwise, assign value of head to variable removed and head should be point to the next element.
+     * At the end, decrement size of list and return value of removed element.
+     *
+     * @return {Node | null}
      */
     popFront(): Node | null {
 
-        /**
-         * If there isn't any element in the list then return null.
-         * Otherwise head should be point to the next element
-         *
-         */
         if (this.head == null) {
             return null;
         }
@@ -64,50 +64,60 @@ export class LinkedListHead implements LinkedListInterface {
     }
 
     /**
-     *  Return value of front element
+     * Return value of front element
      *
-     * @return any | null
+     * @description Check if head isn't null then return value of head. Otherwise, return null.
+     *
+     * @return {any | null}
      */
     getFront(): any | null {
         return this.head ? this.head.data : null;
     }
 
-
     /**
-     *  Add element to the end of the list
+     *  Add element to the end of the list.
+     *
+     *  @description If head is null, then call pushFront function.
+     *  Otherwise, create new node with element. Then iterate list to find a node which
+     *  next value is null which is also last element in the list and change that node
+     *  next value to the new node.
+     *
      *
      * @param data
      */
     pushBack(data: any): void {
-
         if (this.head == null) {
             this.pushFront(data);
             return;
         }
 
         let newNode = new Node(data);
+
         let pointer = this.head;
         while (pointer.next != null) {
             pointer = pointer.next;
         }
 
         pointer.next = newNode;
-
         this.size++;
-
     }
-
 
     /**
      * Remove end element and return value of it
      *
-     * @return Node
+     * @description If head is null that means list is empty, so return null.
+     * Or if head next element is null that means there is only one element in the list,
+     * so head and tail is equal, call popFront(). Otherwise iterate list to find node
+     * before last node because last node will be deleted. Then modify founded node next
+     * value to null.
+     *
+     * @complexity O(n)
+     *
+     * @return {any | null}
      */
-    popBack(): Node | null {
-
+    popBack(): any | null {
         let pointer = this.head;
 
-        // If there is not any element in the list return null
         if (pointer == null) {
             return null;
         }
@@ -130,12 +140,17 @@ export class LinkedListHead implements LinkedListInterface {
     }
 
     /**
-     *  Return value of end element
+     * Return value of end element
      *
-     * @return any
+     * @description If head is null that means list is empty so return null.
+     * Otherwise, iterate list to find a node that next value is null which is
+     * last node in the list and return it's value.
+     *
+     * @complexity O(n)
+     *
+     * @return {any | null}
      */
     getBack(): any | null {
-
         if (this.head == null) {
             return null;
         }
@@ -149,10 +164,17 @@ export class LinkedListHead implements LinkedListInterface {
     }
 
     /**
-     * Remove node by value
+     * Remove node by value.
      *
-     * @param value
-     * @return boolean
+     * @description If searching value is equal to value of head, then remove head.
+     * Otherwise iterate list and stop at the node which's next value is searching one,
+     * in other word, stop on the node that is one before of deleted one. Then next pointer
+     * of stopped node should be equal to the next pointer of deleted one.
+     *
+     * @complexity O(n)
+     *
+     * @param value - Node value looking for removing.
+     * @return {boolean}
      */
     removeByValue(value: any): boolean {
 
@@ -160,6 +182,7 @@ export class LinkedListHead implements LinkedListInterface {
             this.popFront();
             return true;
         }
+
         let pointer = this.head;
         while (pointer.next != null) {
             if (pointer.next.data == value) {
@@ -171,10 +194,10 @@ export class LinkedListHead implements LinkedListInterface {
         return false;
     }
 
-
     /**
      * Return number of elements in the linked list
      *
+     * @complexity O(1)
      * @return number
      */
     getSize(): number {
@@ -182,18 +205,26 @@ export class LinkedListHead implements LinkedListInterface {
     }
 
     /**
-     * Return true | false
+     * Check whether list is empty or not?
      *
-     * @return boolean
+     * @description If size of list is equal to 0, then list is empty.
+     *
+     * @complexity O(1)
+     *
+     * @return {boolean}
      */
     isEmpty(): boolean {
         return this.size == 0;
     }
 
     /**
-     *  Iterate the list and add value of nodes to array
+     * Return list as an array
      *
-     *  @return arr
+     * @description Iterate the list and add node to an array
+     *
+     * @complexity O(n)
+     *
+     * @return {any[]}
      */
     toArray(): any[] {
         let arr = [];
@@ -206,8 +237,13 @@ export class LinkedListHead implements LinkedListInterface {
     }
 
     /**
-     *  Return list as string
-     * @return string
+     * Return list as a string
+     *
+     * @description Create new array with value of nodes data based on array created by toArray() function and convert it
+     * to the string using build-in toString() method.
+     *
+     *
+     * @return {string}
      */
     toString(): string {
         return this.toArray().map(node => node.data).toString();
