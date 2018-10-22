@@ -7,7 +7,8 @@
 </p>
  
 Collection of most used data structures, design patterns, and algorithms written in TypeScript. Each algorithm has 
-separate Readme file with explanation of algorithm, test cases implemented in Jest,  and online demo for playing around.
+separate Readme file with explanation of algorithm, well commented source code, test cases implemented in Jest, 
+and online demo for playing around.
 
 ⚠️ This repository is created only for education purpose. Therefore, using it for commercial purpose is forbidden.
 
@@ -144,6 +145,7 @@ $ npm test
     Thanks for your interest in contributing! Read up on  guidelines for <a href="Contributing.md">Contributing</a>.
  </p>
 </details>
+
 
 ## 🎓 License
 <details>
