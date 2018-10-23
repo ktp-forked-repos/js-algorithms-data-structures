@@ -4,8 +4,7 @@
     "target": "es2017",
     "sourceMap": true,
     "baseUrl": "./",
-    "outDir": "./dist/",
-    "allowJs": true
+    "outDir": "./dist/"
   },
   "exclude": [
     "node_modules",
