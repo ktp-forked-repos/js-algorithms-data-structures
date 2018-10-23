@@ -6,7 +6,7 @@ and pop removes an element from top of the stack.
 
 
 ## PlayGround
-You can check out the [live demo](https://repl.it/@IlkinHuseynoff/data-structure-stack) to explore source code and play around with it. 
+You can check out the [live demo](https://repl.it/@IlkinHuseynoff/Data-Structure-Stack) to explore source code and play around with it. 
 
 
 ## Methods
