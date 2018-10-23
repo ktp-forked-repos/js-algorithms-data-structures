@@ -33,9 +33,9 @@ export class Queue {
 
 
     /**
-     * Remove top element and return it.
+     * Remove front element and return it.
      *
-     * @return any | null
+     * @return {any | null}
      */
     deQueue(): any | null {
         this.size--;
@@ -47,7 +47,7 @@ export class Queue {
      * Get the bottommost element of the queue.
      *
      * @complexity O(1)
-     * @return any | null
+     * @return {any | null}
      */
     peek(): any | null {
         return this.linkedList.getFront();
@@ -56,7 +56,7 @@ export class Queue {
     /**
      * Check whether queue is empty or not
      *
-     * @return boolean
+     * @return {boolean}
      */
     isEmpty(): boolean {
         return this.size <= -1;
@@ -65,7 +65,7 @@ export class Queue {
     /**
      * Return queue as a list
      *
-     * @return string
+     * @return {string}
      */
     toString(): string {
         return this.linkedList.toString();
