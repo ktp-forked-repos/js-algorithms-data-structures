@@ -11,6 +11,9 @@ export class Stack {
     private linkedLIst: LinkedListHeadTail;
     private size: number;
 
+    /**
+     * @constructor
+     */
     constructor() {
         this.linkedLIst = new LinkedListHeadTail();
         this.size = -1;
@@ -22,18 +25,16 @@ export class Stack {
      * @complexity O(1)
      * @param element
      */
-    push(element): void {
+    push(element: any): void {
         this.linkedLIst.pushFront(element);
-
         this.size++;
     }
-
 
     /**
      * Remove top element and return it.
      *
      * @complexity O(1)
-     * @return any | null
+     * @return {any | null}
      */
     pop(): any | null {
         if (this.size >= 0) {
@@ -43,10 +44,10 @@ export class Stack {
     }
 
     /**
-     * Get the top  element of the stack.
+     * Get the top element of the stack.
      *
      * @complexity O(1)
-     * @return any | null
+     * @return {any | null}
      */
     peek(): any | null {
         return this.linkedLIst.getFront();
@@ -55,7 +56,7 @@ export class Stack {
     /**
      * Check whether stack is empty or not
      *
-     * @return boolean
+     * @return {boolean}
      */
     isEmpty(): boolean {
         return this.size <= -1;
@@ -64,7 +65,7 @@ export class Stack {
     /**
      * Return stack as a list
      *
-     * @return string
+     * @return {string}
      */
     toString(): string {
         return this.linkedLIst.toString();
