@@ -29,7 +29,7 @@ and the functions or operations that can be applied to the data.
 - `B` [Linked List](data-structures/linked-list): with/without tail pointer      
 - `B` [Stack](data-structures/stack)                                            
 - `B` [Queue](data-structures/queue)                                                  
-- `B` Hash Table             
+- `B` [Hash Table](data-structures/hash-table)             
 
 #### Tree                                               
 - `B` [Heap](data-structures/heap): min/max version                                                                 
