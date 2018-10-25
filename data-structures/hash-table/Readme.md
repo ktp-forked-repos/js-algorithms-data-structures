@@ -1,4 +1,4 @@
-#Hash Table
+# Hash Table
 
 A hash table is a data structure that is used to store keys/value pairs. It uses a hash function to compute an index 
 into an array in which an element will be inserted or searched. By using a good hash function, hashing can work well.
@@ -20,10 +20,10 @@ Under reasonable assumptions, the average time required to search for an element
 
 | Methods      | Best Case    | Average Case  |
 | :----------: | :---------:  | :----------:  |  
-| `put()`      | O( )         | O( )          |
-| `get()`      | O( )         | O( )          |
-| `has()`      | O( )         | O( )          | 
-| `remove()`   | O( )         | O( )          |    
+| `put()`      | O(1)         | O(n)          |
+| `get()`      | O(1)         | O(n)          |
+| `has()`      | O(1)         | O(n)          | 
+| `remove()`   | O(1)         | O(n)          |    
 
 
 
