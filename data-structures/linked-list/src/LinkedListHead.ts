@@ -10,7 +10,7 @@ import {LinkedListInterface} from "./LinkedListInterface";
 
 export class LinkedListHead implements LinkedListInterface {
 
-    private head: Node | null;
+    protected head: Node | null;
     private size: number;
 
     /**

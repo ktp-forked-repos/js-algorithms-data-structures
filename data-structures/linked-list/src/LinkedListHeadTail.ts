@@ -11,8 +11,8 @@ import {LinkedListInterface} from "./LinkedListInterface";
 
 export class LinkedListHeadTail implements LinkedListInterface {
 
-    private head: Node | null;
-    private tail: Node | null;
+    protected head: Node | null;
+    protected tail: Node | null;
     private size: number;
 
     /**
