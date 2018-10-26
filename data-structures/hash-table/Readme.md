@@ -18,16 +18,18 @@ Under reasonable assumptions, the average time required to search for an element
 
 #### Time Complexity
 
-| Methods      | Best Case    | Average Case  |
-| :----------: | :---------:  | :----------:  |  
-| `put()`      | O(1)         | O(n)          |
-| `get()`      | O(1)         | O(n)          |
-| `has()`      | O(1)         | O(n)          | 
-| `remove()`   | O(1)         | O(n)          |    
+| Methods      | Average Case | Worst Case  |
+| :----------: | :---------:  | :----------:|  
+| `put()`      | O(1)         | O(n)        |
+| `get()`      | O(1)         | O(n)        |
+| `has()`      | O(1)         | O(n)        | 
+| `remove()`   | O(1)         | O(n)        |    
 
 
 
 ## Good to Know
+
+### Applications
 
 - *Associative arrays:* Hash tables are commonly used to implement many types of in-memory tables. They are used to 
 implement associative arrays (arrays whose indices are arbitrary strings or other complicated objects).
