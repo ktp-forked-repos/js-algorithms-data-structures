@@ -26,8 +26,8 @@ You can check out the [live demo](https://repl.it/@IlkinHuseynoff/Data-Structure
 
 | Methods      | Complexity |  
 | :----------: | :--------: |  
-| `add()`      | O(n)       |  
-| `poll()`     | O(n)       |  
+| `add()`      | O(Log(n))  |  
+| `poll()`     | O(Log(n))  |  
 | `peek()`     | O(1)       |  
 
 ## Good to Know
