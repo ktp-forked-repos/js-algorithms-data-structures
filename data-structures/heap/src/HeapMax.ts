@@ -8,12 +8,22 @@ import {Heap} from "./Heap";
 
 export class HeapMax extends Heap {
 
+    /**
+     * @constructor
+     */
     constructor() {
         super();
     }
 
 
-    compare(firstChild, secondChild) {
+    /**
+     * Compare two numbers
+     *
+     * @param {number} firstChild
+     * @param {number} secondChild
+     * @return {boolean}
+     */
+    compare(firstChild: number, secondChild: number) {
         return firstChild > secondChild
     }
 

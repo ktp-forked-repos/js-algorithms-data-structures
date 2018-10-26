@@ -243,7 +243,7 @@ export abstract class Heap {
     /**
      *  Compare two number.
      *
-     *  @description Method will be implemented in extended class.
+     *  @description Method will be overwritten in extended class.
      *
      * @param firstChild
      * @param secondChild
