@@ -55,7 +55,7 @@ You can check out the [live demo](https://repl.it/@IlkinHuseynoff/Data-Structure
 ## Complexities
 ### Time Complexity
 
-| Methods           | One Pointer (Head) | Two Pointer (Head and Tai) | 
+| Methods           | One Pointer (Head) | Two Pointer (Head and Tail) | 
 | :---------------: | :------------:     | :-------------------------: |       
 | `pushFront()`     |      O(1)          | O(1)                        |     
 | `popFront()`      |      O(1)          | O(1)                        |     
