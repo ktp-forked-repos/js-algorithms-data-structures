@@ -34,8 +34,7 @@ You can check out the [live demo](https://repl.it/@IlkinHuseynoff/Data-Structure
 ## Good to Know
 
 ### Applications
-Applications of Queue data structure
-
+ 
 - Queue is useful in CPU scheduling, Disk Scheduling. When multiple processes require CPU at the same time, 
 various CPU scheduling algorithms are used which are implemented using Queue data structure.
 
