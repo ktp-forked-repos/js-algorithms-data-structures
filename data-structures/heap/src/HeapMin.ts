@@ -20,11 +20,11 @@ export class HeapMin extends Heap {
     /**
      * Compare two numbers
      *
-     * @param firstChild
-     * @param secondChild
+     * @param {number} firstChild
+     * @param {number} secondChild
      * @return {boolean}
      */
-    compare(firstChild, secondChild) {
+    compare(firstChild: number, secondChild: number) {
         return firstChild < secondChild
     }
 
