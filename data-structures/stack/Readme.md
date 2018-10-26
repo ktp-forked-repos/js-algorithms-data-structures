@@ -2,7 +2,7 @@
 
 Stack is an abstract data type and a data structure that follows LIFO (last in first out) strategy. It means the element
 added last will be removed first. Stack allows two operations `push` and `pop`. Push adds an element at the top of the stack
-and pop removes an element from top of the stack.
+and pop removes an element from the top of the stack.
 
 
 ## PlayGround
@@ -38,7 +38,7 @@ You can check out the [live demo](https://repl.it/@IlkinHuseynoff/Data-Structure
 An expression can be represented in prefix, postfix or infix notation. Stack can be used to convert one form of expression to another.
 ##### Syntax Parsing
 
-Many compilers use a stack for parsing the syntax of expressions, program blocks etc. before translating into low level code.
+Many compilers use a stack for parsing the syntax of expressions, program blocks etc. before translating into low-level code.
  
 ##### Backtracking
 

@@ -39,14 +39,14 @@ Applications of Queue data structure
 - Queue is useful in CPU scheduling, Disk Scheduling. When multiple processes require CPU at the same time, 
 various CPU scheduling algorithms are used which are implemented using Queue data structure.
 
-- When data is transferred asynchronously between two processes.Queue is used for synchronization.
-Examples : IO Buffers, pipes, file IO, etc.
+- When data is transferred asynchronously between two processes. Queue is used for synchronization.
+Examples: IO Buffers, pipes, file IO, etc.
 
 - In print spooling, documents are loaded into a buffer and then the printer pulls them off the buffer at its own rate.
 Spooling also lets you place a number of print jobs on a queue instead of waiting for each one to finish before 
 specifying the next one.
 
-- Breadth First search in a Graph .It is an algorithm for traversing or searching graph data structures.It starts at 
+- Breadth First search in a Graph. It is an algorithm for traversing or searching graph data structures.It starts at 
 some arbitrary node of a graph and explores the neighbor nodes first, before moving to the next level neighbors.
 
 - Handling of interrupts in real-time systems. The interrupts are handled in the same order as they arrive, 
