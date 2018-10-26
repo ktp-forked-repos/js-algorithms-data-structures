@@ -14,7 +14,7 @@ compared to linked lists.
 
 
 ## PlayGround
-You can check out the [live demo](https://repl.it/@IlkinHuseynoff/Data-Structures-Linked-List) to explore source code and play around with it. 
+You can check out the [live demo](https://repl.it/@IlkinHuseynoff/Data-Structure-Linked-List) to explore source code and play around with it. 
 
 
 ## Methods
