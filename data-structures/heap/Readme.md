@@ -8,6 +8,10 @@ A Binary Heap is a Binary Tree with following properties.
 present in Binary Heap. The same property must be recursively true for all nodes in Binary Tree. Max Binary Heap is 
 similar to MinHeap.
 
+## PlayGround
+You can check out the [live demo](https://repl.it/@IlkinHuseynoff/Data-Structure-Heap) to explore source code and play around with it. 
+
+
 ## Methods
 
 - [x] `add()`: Add element to the heap.

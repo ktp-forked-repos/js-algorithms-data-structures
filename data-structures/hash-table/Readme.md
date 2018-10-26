@@ -4,6 +4,11 @@ A hash table is a data structure that is used to store keys/value pairs. It uses
 into an array in which an element will be inserted or searched. By using a good hash function, hashing can work well.
 Under reasonable assumptions, the average time required to search for an element in a hash table is O(1).
 
+## PlayGround
+You can check out the [live demo](https://repl.it/@IlkinHuseynoff/Data-Structure-Hash-Table) to explore source code and play around with it. 
+
+
+
 ## Methods
 
 - [x] `hash()`: Hash function.
