@@ -181,8 +181,6 @@ export class LinkedListHeadTail implements LinkedListInterface {
      * @return {boolean}
      */
     removeByValue(value: any): boolean {
-        let removed = false;
-
         if (this.head.data === value) {
             this.popFront();
             return true;
@@ -199,7 +197,7 @@ export class LinkedListHeadTail implements LinkedListInterface {
             if (headPointer.next.data === value) {
                 headPointer.next = headPointer.next.next;
                 this.size--;
-               return true;
+                return true;
             }
             headPointer = headPointer.next;
         }
