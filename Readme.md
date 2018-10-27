@@ -33,7 +33,7 @@ and the functions or operations that can be applied to the data.
 
 #### Tree                                               
 - `B` [Heap](data-structures/heap): min/max version                                                                 
-- `B` Priority Queue                                                          
+- `B` [Priority Queue](data-structures/priority-queue)                                                          
 
  
 </p>
