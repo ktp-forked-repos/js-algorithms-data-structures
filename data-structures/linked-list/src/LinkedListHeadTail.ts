@@ -198,12 +198,12 @@ export class LinkedListHeadTail implements LinkedListInterface {
         while (headPointer.next != null) {
             if (headPointer.next.data === value) {
                 headPointer.next = headPointer.next.next;
-                removed = true;
-                break;
+                this.size--;
+               return true;
             }
             headPointer = headPointer.next;
         }
-        return removed;
+        return false;
     }
 
     /**

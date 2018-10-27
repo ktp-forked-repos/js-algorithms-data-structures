@@ -184,8 +184,9 @@ export class LinkedListHead implements LinkedListInterface {
 
         let pointer = this.head;
         while (pointer.next != null) {
-            if (pointer.next.data == value) {
+            if (pointer.next.data === value) {
                 pointer.next = pointer.next.next;
+                this.size--;
                 return true;
             }
             pointer = pointer.next;
