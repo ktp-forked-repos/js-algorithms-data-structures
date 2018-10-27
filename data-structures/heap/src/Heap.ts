@@ -215,7 +215,8 @@ export abstract class Heap {
         let item = this.container[0];
 
         if (this.container.length == 1) {
-            this.container[0] = null;
+            this.container.pop();
+
         } else {
             this.container[0] = this.container.pop();
             this.siftDown();
@@ -240,7 +241,6 @@ export abstract class Heap {
      * @return {string}
      */
     toString(): string {
-
         return this.container.toString();
     }
 
