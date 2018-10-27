@@ -50,6 +50,7 @@ export class LinkedList extends LinkedListHead {
         while (pointer.next != null) {
             if (pointer.next.data["key"] == key) {
                 pointer.next = pointer.next.next;
+                this.size--;
                 return true;
             }
             pointer = pointer.next;
