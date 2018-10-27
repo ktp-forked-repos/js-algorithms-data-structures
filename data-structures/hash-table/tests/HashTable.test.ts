@@ -9,6 +9,12 @@ import {HashTable} from "../src/HashTable";
 
 describe("HashTable", () => {
 
+    it("should create empty hash table", () => {
+        const myTable = new HashTable();
+        expect(myTable.isEmpty()).toBeTruthy();
+
+    });
+
 
     it("should add data to hash table", () => {
 
@@ -22,7 +28,7 @@ describe("HashTable", () => {
         myTable.put(1, "USA");
         expect(myTable.has(1)).toBeTruthy();
         expect(myTable.get(1)).toBe("USA");
-
+        expect(myTable.isEmpty()).toBeFalsy();
 
     });
 
@@ -45,6 +51,12 @@ describe("HashTable", () => {
         expect(myTable.has(44)).toBeFalsy();
         expect(myTable.get(44)).toBeNull();
 
+        expect(myTable.isEmpty()).toBeFalsy();
+
+        myTable.remove(994);
+        myTable.remove(1);
+        myTable.remove(380);
+        expect(myTable.isEmpty()).toBeTruthy();
 
     });
 
