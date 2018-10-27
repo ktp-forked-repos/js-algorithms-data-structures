@@ -227,7 +227,7 @@ export abstract class Heap {
      * @return {boolean}
      */
     public isEmpty(): boolean {
-        return this.container.length > 0
+        return this.container.length == 0
     }
 
     /**
