@@ -29,11 +29,19 @@ and the functions or operations that can be applied to the data.
 - `B` [Linked List](data-structures/linked-list): with/without tail pointer      
 - `B` [Stack](data-structures/stack)                                            
 - `B` [Queue](data-structures/queue)                                                  
-- `B` [Hash Table](data-structures/hash-table)             
-
-#### Tree                                               
+- `B` [Hash Table](data-structures/hash-table)                                                     
 - `B` [Heap](data-structures/heap): min/max version                                                                 
-- `B` [Priority Queue](data-structures/priority-queue)                                                          
+- `B` [Priority Queue](data-structures/priority-queue)      
+
+#### Advanced Data Structures
+                                                    
+- `A` Trie                                                    
+- `A` Tree
+    - `A` Binary Search tree                                                       
+    - `A` AVL tree                                                       
+    - `A` Red-Black tree                                                       
+- `A` Graph                                                    
+- `A` Disjoint Set                                                    
 
  
 </p>
