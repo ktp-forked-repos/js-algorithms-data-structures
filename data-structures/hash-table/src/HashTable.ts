@@ -30,7 +30,7 @@ export class HashTable {
     /**
      * Generate a hash for key.
      *
-     * @description Calculate hash by summing each letter's ASCII value multiplied
+     * @description Calculate hash by summing each character's ASCII value multiplied
      * by their respective index in the string. Then reduce hash number using module
      * operation, so it would fit in an array.
      *
