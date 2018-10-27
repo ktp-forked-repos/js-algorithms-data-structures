@@ -48,12 +48,21 @@ describe("Heap Max", () => {
 
         heap.poll();
 
-        expect(heap.peek()).toBe(10);  
+        expect(heap.peek()).toBe(10);
 
         expect(heap.toString()).toBe("10,9,9,8,3,6");
 
-
     });
 
+
+    it("should remove all root element from heap ", () => {
+
+        let heap = new HeapMax();
+        heap.add(15);
+        heap.poll();
+        expect(heap.peek()).toBeNull();
+        expect(heap.toString()).toBe("");
+
+    });
 
 });

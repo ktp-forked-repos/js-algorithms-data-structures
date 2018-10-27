@@ -10,7 +10,7 @@
  */
 export abstract class Heap {
 
-    protected container: any;
+    protected container: number[];
 
     /**
      * @constructor
@@ -183,7 +183,7 @@ export abstract class Heap {
      * @return {number | null}
      */
     public peek(): number | null {
-        if (this.container.lenngth == 0) return null;
+        if (this.container.length == 0) return null;
         return this.container[0];
     }
 
@@ -211,11 +211,15 @@ export abstract class Heap {
     public poll(): number | null {
         if (this.container.length == 0) return null;
 
+
         let item = this.container[0];
 
-        this.container[0] = this.container.pop();
-
-        this.siftDown();
+        if (this.container.length == 1) {
+            this.container[0] = null;
+        } else {
+            this.container[0] = this.container.pop();
+            this.siftDown();
+        }
 
         return item;
     }
