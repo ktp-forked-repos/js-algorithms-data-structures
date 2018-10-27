@@ -16,6 +16,7 @@ You can check out the [live demo](https://repl.it/@IlkinHuseynoff/Data-Structure
 - [x] `get()`: Get element by key.
 - [x] `has()`: Check whether key is exist or not
 - [x] `remove()`: Remove element by key.
+- [x] `isEmpty()`: Check whether hash table is empty or not.
 
 
 

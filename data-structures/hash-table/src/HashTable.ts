@@ -37,11 +37,11 @@ export class HashTable {
      * @param key
      * @return {number}
      */
-     hash(key: any): number {
+    hash(key: any): number {
         let hashed = 0;
 
         for (let i = 0; i < key.length; i++) {
-            hashed = hashed + key.charCodeAt(i) * (i+1);
+            hashed = hashed + key.charCodeAt(i) * (i + 1);
         }
 
         return hashed % this.containerSize;
@@ -134,6 +134,16 @@ export class HashTable {
         }
 
         return false;
+    }
+
+
+    /**
+     * Check whether hash table is empty or not
+     *
+     * @return {boolean}
+     */
+    isEmpty(): boolean {
+        return this.container.length == 0;
     }
 
 }
