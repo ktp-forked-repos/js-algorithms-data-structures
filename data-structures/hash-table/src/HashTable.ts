@@ -11,6 +11,7 @@ export class HashTable {
 
     private readonly container;
     private readonly containerSize;
+    private size: number;
 
     //Increase default size to decrease number of collisions
     private readonly defaultSize = 64;
@@ -22,6 +23,7 @@ export class HashTable {
      */
     constructor(customSize = 0) {
         this.container = [];
+        this.size = 0;
 
         this.containerSize = customSize > 0 ? customSize : this.defaultSize;
     }
@@ -73,6 +75,8 @@ export class HashTable {
         } else {
             node.value = value;
         }
+
+        this.size++;
     }
 
 
@@ -110,6 +114,7 @@ export class HashTable {
         const hashKey = this.hash(key);
 
         if (hashKey in this.container) {
+            this.size--;
             return this.container[hashKey].removeByKey(key);
         }
 
@@ -143,7 +148,7 @@ export class HashTable {
      * @return {boolean}
      */
     isEmpty(): boolean {
-        return this.container.length == 0;
+        return this.size == 0;
     }
 
 }
