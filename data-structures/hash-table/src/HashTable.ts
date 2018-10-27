@@ -37,11 +37,11 @@ export class HashTable {
      * @param key
      * @return {number}
      */
-    private hash(key: any): number {
+     hash(key: any): number {
         let hashed = 0;
 
         for (let i = 0; i < key.length; i++) {
-            hashed = hashed + key.charCodeAt(i) * i;
+            hashed = hashed + key.charCodeAt(i) * (i+1);
         }
 
         return hashed % this.containerSize;
