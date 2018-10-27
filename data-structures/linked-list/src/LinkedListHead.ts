@@ -11,7 +11,7 @@ import {LinkedListInterface} from "./LinkedListInterface";
 export class LinkedListHead implements LinkedListInterface {
 
     protected head: Node | null;
-    private size: number;
+    protected size: number;
 
     /**
      * @constructor

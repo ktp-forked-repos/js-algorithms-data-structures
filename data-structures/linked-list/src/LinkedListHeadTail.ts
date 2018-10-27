@@ -13,7 +13,7 @@ export class LinkedListHeadTail implements LinkedListInterface {
 
     protected head: Node | null;
     protected tail: Node | null;
-    private size: number;
+    protected size: number;
 
     /**
      * @constructor
