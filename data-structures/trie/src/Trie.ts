@@ -48,18 +48,8 @@ export class Trie {
      * @return {boolean}
      */
     contains(word: string): boolean {
-        let current = this.root;
-
-        for (let i = 0; i < word.length; i++) {
-            let node = current.getChild(word[i]);
-
-            if (node == null) {
-                return false;
-            }
-            current = node;
-        }
-
-        return current.isWord;
+        let lastVisited = this.traverse(word).pop();
+        return lastVisited ? lastVisited.isWord : false;
     }
 
 
@@ -76,13 +66,11 @@ export class Trie {
         if (includeRoot) traversed.push(current);
 
         for (let i = 0; i < word.length; i++) {
-            let node = current.getChild(word[i]);
-
-            if (node == null) {
+            current = current.getChild(word[i]);
+            traversed.push(current);
+            if (current == null) {
                 break;
             }
-            current = node;
-            traversed.push(current);
         }
         return traversed;
     }
@@ -97,6 +85,11 @@ export class Trie {
         let visited = this.traverse(word, true);
 
         let node: TrieNode = visited.pop();
+
+        if (node == null) {
+            return;
+        }
+
         node.isWord = false;
         while (visited.length > 0 && !node.hasChildren() && !node.isWord) {
             let old = node;

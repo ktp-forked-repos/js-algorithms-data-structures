@@ -39,6 +39,8 @@ describe("Trie", () => {
         trie.insert("Carpet");
 
 
+        trie.remove("Care");
+
         expect(trie.contains("Car")).toBeTruthy();
         trie.remove("Car");
         expect(trie.contains("Car")).toBeFalsy();

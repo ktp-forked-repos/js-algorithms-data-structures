@@ -13,7 +13,6 @@ export class TrieNode {
     public character: string;
     public isWord: boolean;
 
-
     /**
      * @constructor
      */
@@ -21,11 +20,10 @@ export class TrieNode {
         this.character = character;
         this.children = new HashTable(26);
         this.isWord = false;
-
     }
 
     /**
-     * Check if node has child
+     * Check if node has child.
      *
      * @return {boolean}
      */
@@ -34,6 +32,7 @@ export class TrieNode {
     }
 
     /**
+     *  Get child of parent node.
      *
      * @param {string} character
      * @return {boolean}
@@ -41,6 +40,5 @@ export class TrieNode {
     getChild(character: string) {
         return this.children.get(character);
     }
-
 
 }
