@@ -37,10 +37,6 @@ describe("Trie", () => {
         trie.insert("Car");
         trie.insert("Card");
         trie.insert("Carpet");
-        trie.insert("Book");
-        trie.insert("Bold");
-        trie.insert("Red");
-        trie.insert("Remove");
 
 
         expect(trie.contains("Car")).toBeTruthy();
@@ -51,6 +47,23 @@ describe("Trie", () => {
         trie.remove("Carpet");
         expect(trie.contains("Carpet")).toBeFalsy();
 
+        expect(trie.contains("Card")).toBeTruthy();
+        trie.remove("Card");
+        expect(trie.contains("Card")).toBeFalsy();
+
+
+
+        trie.insert("Car");
+        trie.insert("Card");
+        trie.insert("Carpet");
+
+        expect(trie.contains("Carpet")).toBeTruthy();
+        trie.remove("Carpet");
+        expect(trie.contains("Carpet")).toBeFalsy();
+
+        expect(trie.contains("Car")).toBeTruthy();
+        trie.remove("Car");
+        expect(trie.contains("Car")).toBeFalsy();
 
 
         expect(trie.contains("Card")).toBeTruthy();
@@ -58,11 +71,41 @@ describe("Trie", () => {
         expect(trie.contains("Card")).toBeFalsy();
 
 
-        expect(trie.contains("Book")).toBeTruthy();
-        trie.remove("Book");
-        expect(trie.contains("Book")).toBeFalsy();
+        trie.insert("Car");
+        trie.insert("Card");
+        trie.insert("Carpet");
 
 
+        expect(trie.contains("Card")).toBeTruthy();
+        trie.remove("Card");
+        expect(trie.contains("Card")).toBeFalsy();
+
+        expect(trie.contains("Carpet")).toBeTruthy();
+        trie.remove("Carpet");
+        expect(trie.contains("Carpet")).toBeFalsy();
+
+        expect(trie.contains("Car")).toBeTruthy();
+        trie.remove("Car");
+        expect(trie.contains("Car")).toBeFalsy();
+
+
+
+        trie.insert("Car");
+        trie.insert("Card");
+        trie.insert("Carpet");
+
+
+        expect(trie.contains("Card")).toBeTruthy();
+        trie.remove("Card");
+        expect(trie.contains("Card")).toBeFalsy();
+
+        expect(trie.contains("Car")).toBeTruthy();
+        trie.remove("Car");
+        expect(trie.contains("Car")).toBeFalsy();
+
+        expect(trie.contains("Carpet")).toBeTruthy();
+        trie.remove("Carpet");
+        expect(trie.contains("Carpet")).toBeFalsy();
 
     });
 
