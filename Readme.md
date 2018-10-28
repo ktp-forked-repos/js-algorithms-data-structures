@@ -35,7 +35,7 @@ and the functions or operations that can be applied to the data.
 
 #### Advanced Data Structures
                                                     
-- `A` Trie                                                    
+- `A` [Trie](data-structures/trie)                                                    
 - `A` Tree
     - `A` Binary Search tree                                                       
     - `A` AVL tree                                                       
@@ -116,7 +116,7 @@ View Contents
 
 ### Prerequisites
 
-To clone and run this application, you'll need Git and Node.js (which comes with npm) installed on your computer. 
+To clone and run this application, you'll need Git and TrieNode.js (which comes with npm) installed on your computer. 
 
 
 ### Installing
