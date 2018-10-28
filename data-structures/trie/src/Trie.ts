@@ -6,7 +6,6 @@
  **/
 import {TrieNode} from "./TrieNode";
 
-
 export class Trie {
 
     public readonly root: TrieNode;
@@ -65,14 +64,16 @@ export class Trie {
 
 
     /**
-     * Remove word from trie
+     * Traverse trie and add visited nodes to an array
      *
      * @param {string} word
-     * @return {boolean}
+     * @param {boolean} includeRoot
+     * @return {TrieNode[]}
      */
-    remove(word: string) {
+    private traverse(word: string, includeRoot: boolean = false): TrieNode[] {
         let current = this.root;
-        let traversed = [current];
+        let traversed: TrieNode[] = [];
+        if (includeRoot) traversed.push(current);
 
         for (let i = 0; i < word.length; i++) {
             let node = current.getChild(word[i]);
@@ -83,12 +84,23 @@ export class Trie {
             current = node;
             traversed.push(current);
         }
+        return traversed;
+    }
 
-        let node: TrieNode = traversed.pop();
+    /**
+     * Remove word from trie
+     *
+     * @param {string} word
+     * @return {boolean}
+     */
+    remove(word: string) {
+        let visited = this.traverse(word, true);
+
+        let node: TrieNode = visited.pop();
         node.isWord = false;
-        while (traversed.length > 0 && !node.hasChildren() && !node.isWord) {
+        while (visited.length > 0 && !node.hasChildren() && !node.isWord) {
             let old = node;
-            node = traversed.pop();
+            node = visited.pop();
             node.children.remove(old.character);
         }
     }

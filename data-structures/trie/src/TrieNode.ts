@@ -31,7 +31,6 @@ export class TrieNode {
      */
     hasChildren(): boolean {
         return !this.children.isEmpty();
-
     }
 
     /**
