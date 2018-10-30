@@ -14,11 +14,16 @@ export class Trie {
      * @constructor
      */
     constructor() {
-        this.root = new TrieNode("*");
+        this.root = new TrieNode();
     }
 
 
     /**
+     * Insert word to the trie.
+     *
+     * @description First check whether character is child node of its'parent.
+     * If so, that node should be new parent. If not, create new node with the character,
+     * then add it as a child node to the parent and make it parent node.
      *
      * @param {string} word
      */
@@ -27,13 +32,12 @@ export class Trie {
 
         for (let i = 0; i < word.length; i++) {
             let c = word[i];
-            let child = current.children;
 
-            if (child.has(c)) {
-                current = child.get(c);
+            if (current.hasChild(c)) {
+                current = current.getChild(c);
             } else {
                 let newNode = new TrieNode(c);
-                child.put(c, newNode);
+                current.addChild(c, newNode);
                 current = newNode;
             }
         }
@@ -43,6 +47,12 @@ export class Trie {
 
 
     /**
+     * Check whether trie contains given word.
+     *
+     * @description Traverse trie and add visited nodes to the array.
+     * Then get last node from the array and if that node is null, it means
+     * word is not exist in the trie. Otherwise it may exist as word (true) or
+     * as prefix of other words (false)
      *
      * @param {string} word
      * @return {boolean}
@@ -54,7 +64,7 @@ export class Trie {
 
 
     /**
-     * Traverse trie and add visited nodes to an array
+     * Traverse trie and add visited nodes to an array.
      *
      * @param {string} word
      * @param {boolean} includeRoot
@@ -78,12 +88,18 @@ export class Trie {
     /**
      * Remove word from trie
      *
+     * @description Traverse trie and add visited nodes to the array and get last
+     * node from that array and if it is null that means word doesn't exist in
+     * the trie, so stop. Otherwise, change isWord property of the node to false
+     * to un-mark it as a word. Then iterate the array to check if node doesn't have
+     * a child and wasn't marked as a word, then remove it form trie. For removing delete
+     * that node from it's parent.
+     *
      * @param {string} word
      * @return {boolean}
      */
     remove(word: string) {
         let visited = this.traverse(word, true);
-
         let node: TrieNode = visited.pop();
 
         if (node == null) {
@@ -94,7 +110,7 @@ export class Trie {
         while (visited.length > 0 && !node.hasChildren() && !node.isWord) {
             let old = node;
             node = visited.pop();
-            node.children.remove(old.character);
+            node.removeChild(old.character);
         }
     }
 }
