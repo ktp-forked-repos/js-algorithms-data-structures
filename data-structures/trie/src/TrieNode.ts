@@ -4,7 +4,7 @@
  * Web: huseynov.me
  * Date: 10/27/18, 19:29
  **/
-import {HashTable} from "../../hash-table/src/HashTable";
+import {HashTable} from "../../hash-table/src/chaining/HashTable";
 
 
 export class TrieNode {

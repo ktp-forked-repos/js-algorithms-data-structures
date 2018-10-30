@@ -5,16 +5,16 @@
  * Date: 10/25/18, 21:34
  **/
 import {LinkedList} from "./LinkedList";
+import {HashTableInterface} from "../HashTableInterface";
 
-
-export class HashTable {
+export class HashTable implements HashTableInterface {
 
     private readonly container;
     private readonly containerSize;
     private size: number;
 
     //Increase default size to decrease number of collisions
-    private readonly defaultSize = 64;
+    private readonly DEFAULT_SIZE = 64;
 
     /**
      *
@@ -25,22 +25,24 @@ export class HashTable {
         this.container = [];
         this.size = 0;
 
-        this.containerSize = customSize > 0 ? customSize : this.defaultSize;
+        this.containerSize = customSize > 0 ? customSize : this.DEFAULT_SIZE;
     }
 
 
     /**
-     * Generate a hash for key.
+     * Generate a hash for the key.
      *
      * @description Calculate hash by summing each character's ASCII value multiplied
      * by their respective index in the string. Then reduce hash number using module
-     * operation, so it would fit in an array.
+     * operation, so it would fit in an array. Keep in mind that, charCodeAt() function
+     * only works with strings, so numbers should be converted to strings too.
      *
      * @param key
      * @return {number}
      */
     hash(key: any): number {
         let hashed = 0;
+        key = key.toString();
 
         for (let i = 0; i < key.length; i++) {
             hashed = hashed + key.charCodeAt(i) * (i + 1);
@@ -51,7 +53,7 @@ export class HashTable {
 
 
     /**
-     * Add element to the hash table
+     * Add key,value pair to the hash table.
      *
      * @description First, generate index by hashing the key. Then check if hashed index
      * is exist in the array, if not assign new LinkedList to array with that index. Then
@@ -62,6 +64,9 @@ export class HashTable {
      * @param value
      */
     public put(key: any, value: any): void {
+
+        if (this.size >= this.containerSize) return;
+
         let hashKey = this.hash(key);
 
         if (typeof this.container[hashKey] == "undefined") {
@@ -70,6 +75,7 @@ export class HashTable {
 
         const list = this.container[hashKey];
         const node = list.searchByKey(key);
+
         if (node == null) {
             list.pushFront({key, value});
         } else {
@@ -81,7 +87,7 @@ export class HashTable {
 
 
     /**
-     * Get value by key
+     * Get value by the key.
      *
      * @description Generate index by hashing key, then check if index exist in array, if so
      * find value in the linked list by searching key. If found return value, otherwise return null.
@@ -102,7 +108,7 @@ export class HashTable {
 
 
     /**
-     * Remove element by key
+     * Remove element by the key.
      *
      * @description Generate index by hashing key, then check if index exist in array, if so
      * remove value in the linked list by searching key.
@@ -123,9 +129,9 @@ export class HashTable {
 
 
     /**
-     * Check whether key exist in the list or not
+     * Check whether key exist in the list or not.
      *
-     * @description Generate index by hashing key, then check if index exist in hash table
+     * @description Generate index by hashing key, then check if index exist in hash table.
      *
      * @param key
      * @return {boolean}

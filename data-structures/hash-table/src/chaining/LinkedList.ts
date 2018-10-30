@@ -4,7 +4,7 @@
  * Web: huseynov.me
  * Date: 10/25/18, 22:44
  **/
-import {LinkedListHead} from "../../linked-list/src/LinkedListHead";
+import {LinkedListHead} from "../../../linked-list/src/LinkedListHead";
 
 
 /**
