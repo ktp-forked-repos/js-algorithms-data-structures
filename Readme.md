@@ -37,7 +37,7 @@ and the functions or operations that can be applied to the data.
                                                     
 - `A` [Trie](data-structures/trie)                                                    
 - `A` Tree
-    - `A` Binary Search tree                                                       
+    - `A` [Binary Search tree](data-structures/binary-search-tree)                                                         
     - `A` AVL tree                                                       
     - `A` Red-Black tree                                                       
 - `A` Graph                                                    
@@ -102,7 +102,6 @@ template for how to solve a problem that can be used in many different situation
 
 ### Behavioral design patterns
 
-- 
  </p>
 </details>
  
@@ -116,7 +115,7 @@ View Contents
 
 ### Prerequisites
 
-To clone and run this application, you'll need Git and TrieNode.js (which comes with npm) installed on your computer. 
+To clone and run this application, you'll need Git and Node.js (which comes with npm) installed on your computer. 
 
 
 ### Installing
