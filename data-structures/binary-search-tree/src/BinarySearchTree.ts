@@ -10,7 +10,7 @@ import {TreeNode} from "./TreeNode";
 export class BinarySearchTree {
 
     private size: number;
-    private root: TreeNode | null;
+    public root: TreeNode | null;
 
     constructor() {
         this.size = 0;
@@ -19,26 +19,17 @@ export class BinarySearchTree {
 
 
     /**
+     *  Add number to the tree
      *
-     * @param {number} key
+     * @param {number} data
      */
-    insert(key: number) {
-        this.root = this.addRecursive(this.root, key);
+    add(data: number) {
+        this.root = this.addRecursive(this.root, data);
         this.size++;
     }
 
-
     /**
-     *
-     * @param {number} key
-     * @return {boolean}
-     */
-    contains(key: number): boolean {
-        return this.findRecursive(this.root, key);
-    }
-
-
-    /**
+     * Add number to the tree with recursion
      *
      * @param {TreeNode} current
      * @param {number} data
@@ -60,41 +51,151 @@ export class BinarySearchTree {
         return current;
     }
 
+    /**
+     * Check whether element exist in the tree
+     *
+     * @param {number} data
+     * @return {boolean}
+     */
+    contains(data: number): boolean {
+        return this.findRecursive(this.root, data);
+    }
+
+    /**
+     * Find element in the tree with recursion
+     *
+     * @param {TreeNode} current
+     * @param {number} data
+     * @return {boolean}
+     */
+    private findRecursive(current: TreeNode, data: number): boolean {
+        if (current == null)
+            return false;
+
+        if (current.value == data)
+            return true;
+
+        return data < current.value
+            ? this.findRecursive(current.leftChild, data)
+            : this.findRecursive(current.rightChild, data);
+    }
+
+
+    /**
+     * Delete element from the tree
+     *
+     * @param {number} data
+     */
+    delete(data: number) {
+        this.root = this.deleteRecursively(this.root, data);
+    }
+
+    /**
+     * Find and delete element from the tree with recursion
+     *
+     * @param {TreeNode} current
+     * @param {number} data
+     * @return {TreeNode}
+     */
+    private deleteRecursively(current: TreeNode, data: number): TreeNode {
+        if (current == null) {
+            return null;
+        }
+
+        if (current.value == data) {
+
+            this.size--;
+
+            if (current.leftChild == null && current.rightChild == null) {
+                return null;
+            }
+
+            if (current.rightChild == null) {
+                return current.leftChild;
+            }
+            if (current.leftChild == null) {
+                return current.rightChild;
+            }
+
+            let smallestValue = this.findSmallestValue(current.rightChild);
+            current.value = smallestValue;
+            current.rightChild = this.deleteRecursively(current.rightChild, smallestValue);
+            return current;
+
+        }
+
+
+        if (data < current.value) {
+            current.leftChild = this.deleteRecursively(current.leftChild, data);
+            return current;
+        }
+        current.rightChild = this.deleteRecursively(current.rightChild, data);
+
+        return current;
+    }
+
 
     /**
      *
      * @param {TreeNode} current
-     * @param {number} key
-     * @return {boolean}
+     * @return {number}
      */
-    private findRecursive(current: TreeNode, key: number): boolean {
-
-        if(current == null){
-            return false;
-        }
-
-        if (current.value == key) {
-            return true;
-        }
-
-
-        return key < current.value
-            ? this.findRecursive(current.leftChild, key)
-            : this.findRecursive(current.rightChild, key);
-
-    }
-
-    search(key: number) {
-
+    private findSmallestValue(current: TreeNode) {
+        return current.leftChild == null ? current.value : this.findSmallestValue(current.leftChild);
     }
 
 
-    searchRange(start: number, end: number) {
+    /**
+     * Traverse the tree by first visiting left sub-tree, then root, and finally right sub-tree
+     *
+     * @param {TreeNode} node
+     * @param {number[]} arr
+     * @return {string}
+     */
+    traverseInOrder(node: TreeNode = this.root, arr: number[] = []): string {
+        if (node == null) return;
 
+        this.traverseInOrder(node.leftChild, arr);
+        arr.push(node.value);
+        this.traverseInOrder(node.rightChild, arr);
+
+        return arr.toString();
     }
 
-    delete(key: number) {
 
+    /**
+     * Traverse the tree by first visiting root, then left sub-tree, and finally right sub-tree
+     *
+     * @param {TreeNode} node
+     * @param {number[]} arr
+     * @return {string}
+     */
+    traversePreOrder(node: TreeNode = this.root, arr: number[] = []): string {
+        if (node == null) return;
+
+        arr.push(node.value);
+        this.traversePreOrder(node.leftChild, arr);
+        this.traversePreOrder(node.rightChild, arr);
+
+        return arr.toString();
+    }
+
+
+    /**
+     * Traverse the tree by first visiting left sub-tree, then right sub-tree, and finally root
+     *
+     * @param {TreeNode} node
+     * @param {number[]} arr
+     * @return {string}
+     */
+    traversePostOrder(node: TreeNode = this.root, arr: number[] = []): string {
+        if (node == null) return;
+
+        this.traversePostOrder(node.leftChild, arr);
+        this.traversePostOrder(node.rightChild, arr);
+        arr.push(node.value);
+
+        return arr.toString();
     }
 
 
